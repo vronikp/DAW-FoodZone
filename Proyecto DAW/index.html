@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="es-ec">
+	<head>
+        <title>Food zone</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="CSS/estilo01.css" />
+        <link rel="stylesheet" href="CSS/estiloSlideShow.css" />
+        <script src="js/cargarArchivos.js"></script>
+        <link rel="icon" href="imagen/logo-3.jpg" />
+	</head>
+
+	<body>
+		<header>
+            <figure id="logo">
+                <img src="imagen/logo.jpg" alt="Logo Llevame a comer!" width="422" height="200"/>
+            </figure>
+            <div id="slogan">
+			    <h2 id="sloganTexto">
+				    Encuentra donde comer lo que quieres comer!
+			    </h2>
+            </div>
+		</header>
+		
+		<nav>
+			<ul>
+			    <li><a class="general" href="#">Inicio</a></li>
+                <li><a class="general" href="#">Tipo Local</a></li>
+                <li><a class="general" href="#">Locales por Zona</a></li>
+                <li><a class="general" href="#">Ranking</a></li>
+                <li><a class="admin" href="#">Administrar Usuarios</a></li>
+                <li><a class="adminLocal" href="#">Administrar Local</a></li>
+                <li><a class="usuario" href="#">Favoritos</a></li>
+            </ul>
+		</nav>
+		
+		<aside id="asideIzq">
+		    <div id = "menu">
+			    <ul>
+				    <li>Inicio </li>
+				    <li>Bares </li>
+				    <li>Mapa </li>
+				    <li>Promociones </li>
+				    <li>Sobre nosotros</li>
+				    <li>Cont&aacute;ctanos</li>
+			    </ul>
+		
+		    </div>
+		
+		    <div id = "login">
+			    <form> 
+				    Usuario: <input type = "text" name = "txt_usuario"> <br>
+				    Contrase&ntilde;a: <input type = "password" name = "txt_password"> <br>
+				    <input type = "submit" value = "Iniciar sesi&oacute;n">
+			    </form>		
+		    </div>		
+		
+		
+		</aside>
+
+		<aside id="asideDer">
+            <div id = "mapa">
+		        MAPA
+		    </div>
+            <div id="redesSociales">
+                Redes sociales y otros
+            </div>
+		</aside>
+		
+        <!--SLIDESHOW-->
+        <span id="sl_play" class="sl_command">&nbsp;</span>
+	    <span id="sl_pause" class="sl_command">&nbsp;</span>
+	
+	
+	    <section id="slideshow">
+	
+		    <a class="play_commands pause" href="#sl_pause" title="Maintain paused">Pause</a>
+		    <a class="play_commands play" href="#sl_play" title="Play the animation">Play</a>
+		
+		    <div class="container">
+			    <div class="c_slider"></div>
+			    <div class="slider">
+				    <figure>
+					    <img src="imagen/slideshow/1.jpg" alt="" width="640" height="310" />
+					    <figcaption>Tacos de Local 1</figcaption>
+				    </figure><!--
+				    --><figure>
+					    <img src="imagen/slideshow/2.jpg" alt="" width="640" height="310" />
+					    <figcaption>Pincho y chorizos asados de Local 2</figcaption>
+				    </figure><!--
+				    --><figure>
+					    <img src="imagen/slideshow/3.jpg" alt="" width="640" height="310" />
+					    <figcaption>Pizza de Local 3</figcaption>
+				    </figure><!--
+				    --><figure>
+					    <img src="imagen/slideshow/4.jpg" alt="" width="640" height="310" />
+					    <figcaption>Hamburguesa de pollo de Local 4</figcaption>
+				    </figure>
+			    </div>
+		    </div>
+		
+	    </section>
+	
+	
+        <section id = "contenido">
+		<!--Aqui va todo el contenido del sitio, slideshow, mapa, bares, contacto -->
+            <div id="top3">
+                <h2>Top 3</h2>
+                <div id="contenidoTop3">
+                    <div id="top3Lugar1">
+                        <h3 class="nombreLocalT3" id="nombreL1">Local lugar 1</h3>
+                        <figure class="figLocalT3">
+                            <img src="imagen/local1.png" alt="Imagen principal del local" width="100" height="100"/>
+                            <figcaption>Local 1</figcaption>
+                        </figure>
+                        <p class="pLocalT3" id="resenaL1">
+                            Resena del local.
+                        </p>
+                    </div>
+                    <div id="top3Lugar2">
+                        <h3 class="nombreLocalT3" id="nombreL2">Local lugar 2</h3>
+                        <figure class="figLocalT3">
+                            <img src="imagen/local2.png" alt="Imagen principal del local" width="100" height="100"/>
+                            <figcaption>Local 2</figcaption>
+                        </figure>
+                        <p class="pLocalT3" id="resenaL2">
+                            Resena del local.
+                        </p>
+                    </div>
+                    <div id="top3Lugar3">
+                        <h3 class="nombreLocalT3" id="nombreL3">Local lugar 3</h3>
+                        <figure class="figLocalT3">
+                            <img src="imagen/loca3.png" alt="Imagen principal del local" width="100" height="100"/>
+                            <figcaption>Local 3</figcaption>
+                        </figure>
+                        <p class="pLocalT3" id="resenaL3">
+                            Resena del local.
+                        </p>
+                    </div>
+                </div>
+            </div>
+		</section>
+        
+
+		<footer>
+			Proyecto de Desarrollo de Aplicaciones Web <br>
+			Desarrollado por: 
+			<ul>
+				<li> Iv&aacute;n Aveiga</li>
+				<li> Diana Panchana</li>
+				<li> Ver&oacute;nica Pozo</li>
+				<li> Marcelo S&aacute;nchez</li>
+			</ul>
+			
+			Todos los derechos reservados &copy;
+			
+			2013 - 2014
+		</footer>
+		
+	</body>
+</html>

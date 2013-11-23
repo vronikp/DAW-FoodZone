@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<zonas>
+    <zona>
+        <id>001</id>
+        <nombre>FIEC</nombre>
+        <latidud></latidud>
+        <longitud></longitud>
+    </zona>
+</zonas>

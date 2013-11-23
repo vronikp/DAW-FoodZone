@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<restaurantes>
+    <restaurante>
+        <id>0001</id>
+        <nombre>Local 1</nombre>
+        <direccion>FIEC nueva</direccion>
+        <idZona>001</idZona>
+        <resena>El local 1 se encuentra estategicamente ubicado en la conocida FIEC "nueva". La variedad de comida que ofrece es de la mejor calidad, por lo que es preferida por los estudiantes de todas las facultades</resena>
+        <fechaIngreso>2013-11-21 11:00:00</fechaIngreso>
+        <usuarioIngreso>admin</usuarioIngreso>
+        <activo>true</activo>
+    </restaurante>
+    <restaurante>
+        <id>0002</id>
+        <nombre>Local 2</nombre>
+        <direccion>FIEC vieja</direccion>
+        <idZona>001</idZona>
+        <latidud></latidud>
+        <longitud></longitud>
+        <resena>El local 2 ofrece diferentes pastelitos que sin duda querras volver a comer!</resena>
+        <fechaIngreso>2013-11-21 11:00:00</fechaIngreso>
+        <usuarioIngreso>admin</usuarioIngreso>
+        <activo>true</activo>
+    </restaurante>
+    <restaurante>
+        <id>0003</id>
+        <nombre>Local 3</nombre>
+        <direccion>FIMCBOR arriba</direccion>
+        <idZona>002</idZona>
+        <resena>Vendemos colas, papitas, tortolines, caramelos. Somos el quiosco mas completo.</resena>
+        <latidud></latidud>
+        <longitud></longitud>
+        <fechaIngreso>2013-11-21 11:00:00</fechaIngreso>
+        <usuarioIngreso>admin</usuarioIngreso>
+        <activo>true</activo>
+    </restaurante>
+    <restaurante>
+        <id>0004</id>
+        <nombre>Local 4</nombre>
+        <direccion>CN Basico nuevo</direccion>
+        <idZona>003</idZona>
+        <resena>Local 4 es lo que necesitabas para calmar tu hambre. Que mejor que estudiar con un combito? No olvides visitarnos.</resena>
+        <latidud></latidud>
+        <longitud></longitud>
+        <fechaIngreso>2013-11-21 11:00:00</fechaIngreso>
+        <usuarioIngreso>admin</usuarioIngreso>
+        <activo>true</activo>
+    </restaurante>
+    <restaurante>
+        <id>0005</id>
+        <nombre>Local 5</nombre>
+        <direccion>CN Basico viejo</direccion>
+        <idZona>004</idZona>
+        <resena>Nos especializamos en comida rapida y desayunos ecuatorianos.</resena>
+        <latidud></latidud>
+        <longitud></longitud>
+        <fechaIngreso>2013-11-21 11:00:00</fechaIngreso>
+        <usuarioIngreso>admin</usuarioIngreso>
+        <activo>true</activo>
+    </restaurante>
+</restaurantes>

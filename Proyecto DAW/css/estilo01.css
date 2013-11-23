@@ -1,0 +1,109 @@
+﻿body
+{
+    color:#BFC5C9;
+}
+
+header
+{
+    width: 90%;
+    margin-right:auto;
+    margin-left:auto;
+    padding: 10px;
+    overflow:hidden;
+    color: #706f6e;
+}
+
+#logo
+{
+    margin:0 auto;
+}
+
+#slogan
+{
+    display: table-cell;
+	vertical-align: middle;
+    height:200px;
+}
+
+#sloganTexto
+    {
+        margin: 10px 30px auto;
+    }
+
+header figure
+{
+    float: left;
+}
+
+#asideIzq
+{
+    width:20%;
+    clear:both;
+    float:left;
+}
+
+#asideDer
+{
+    width:20%;
+    float:right;
+}
+
+footer
+{
+    clear:both;
+    float:left;
+}
+
+nav ul{
+    list-style: none;
+    margin: 10px 10px 0px 0px;
+    padding: inherit;
+    float: left;
+    background-color: #FF9900;
+    width: 100%;
+}
+
+nav ul li{
+    margin: 5px 5px 0 5px;
+    padding:0;
+    float:left;
+    
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    font-family: 'Bookman Old Style';
+    color: #706f6e;
+    font-size: 1.6em;
+    padding-left:15px;
+    display:none;
+ }
+
+.general
+{
+    display:inline;
+}
+
+
+#contenido
+{
+    width:60%;
+    margin-right:auto;
+    margin-left:auto;
+    padding: 10px;
+}
+
+#contenidoTop3{
+    list-style:none;
+    margin: 10px 10px;
+    padding:0;
+    float:left;
+}
+
+#contenidoTop3 div{
+    margin: 5px 5px 0 5px;
+    padding:0;
+    float:left;
+}
+
