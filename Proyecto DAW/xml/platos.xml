@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<platos>
+	<plato>
+		<id_plato>	1	</id_plato>
+		<nombre>	Arroz 1	</nombre>
+		<foto>	../images/platos/img_1	</foto>
+		<puntuacion> 4 </puntuacion>
+	</plato>
+	<plato>
+		<id_plato>	2	</id_plato>
+		<nombre>	Sopa 1 </nombre>
+		<foto>	../images/platos/img_2	</foto>
+		<puntuacion> 4 </puntuacion>
+	</plato>
+
+	<plato>
+		<id_plato>	3	</id_plato>
+		<nombre>	Arroz 2	</nombre>
+		<foto>	../images/platos/img_3	</foto>
+		<puntuacion> 4 </puntuacion>
+	</plato>
+
+	<plato>
+		<id_plato>	4	</id_plato>
+		<nombre>	Sopa marinera </nombre>
+		<foto>	../images/platos/img_4	</foto>
+		<puntuacion> 4 </puntuacion>
+	</plato>
+
+	<plato>
+		<id_plato>	5	</id_plato>
+		<nombre>	Arroz vegerariano	</nombre>
+		<foto>	../images/platos/img_1	</foto>
+		<puntuacion> 4 </puntuacion>
+	</plato>
+</platos>
