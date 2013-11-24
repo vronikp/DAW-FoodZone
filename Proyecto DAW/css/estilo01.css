@@ -3,6 +3,21 @@
     color:#BFC5C9;
 }
 
+#platos{
+	float:left;
+	margin-top:12%;
+	margin-left:85px;
+	width:70%;
+	height:30%;
+}
+
+#plato
+{
+	width:40%;
+
+}
+
+
 header
 {
     width: 90%;
@@ -11,6 +26,15 @@ header
     padding: 10px;
     overflow:hidden;
     color: #706f6e;
+}
+
+#map-canvas
+{
+	margin-top:25px;
+	margin-left:85px;
+	width:70%;
+	height:30%;
+
 }
 
 #logo
