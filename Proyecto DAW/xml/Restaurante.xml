@@ -2,60 +2,43 @@
 <restaurantes>
     <restaurante>
         <id>0001</id>
-        <nombre>Local 1</nombre>
+        <nombre>Comedor FIEC</nombre>
         <direccion>FIEC nueva</direccion>
-        <idZona>001</idZona>
-        <resena>El local 1 se encuentra estategicamente ubicado en la conocida FIEC "nueva". La variedad de comida que ofrece es de la mejor calidad, por lo que es preferida por los estudiantes de todas las facultades</resena>
+        <resena>El local 1 se encuentra estrategicamente ubicado en la conocida FIEC "nueva". 
+				La variedad de comida que ofrece es de la mejor calidad, por lo que es preferida 
+				por los estudiantes de todas las facultades</resena>
+		<idZona>001</idZona>
+		<puntuacion> 4 </puntuacion>
         <fechaIngreso>2013-11-21 11:00:00</fechaIngreso>
-        <usuarioIngreso>admin</usuarioIngreso>
+        <idUsuarioIngreso>0001</idUsuarioIngreso>
+		<latitud> -2.144947</latitud>
+		<longitud> -79.96617</longitud>
         <activo>true</activo>
     </restaurante>
     <restaurante>
         <id>0002</id>
-        <nombre>Local 2</nombre>
-        <direccion>FIEC vieja</direccion>
-        <idZona>001</idZona>
-        <latidud></latidud>
-        <longitud></longitud>
-        <resena>El local 2 ofrece diferentes pastelitos que sin duda querras volver a comer!</resena>
-        <fechaIngreso>2013-11-21 11:00:00</fechaIngreso>
-        <usuarioIngreso>admin</usuarioIngreso>
+        <nombre>Pasteles El Chino</nombre>
+        <direccion>Frente de la plazoleta de la FIEC Nueva</direccion>
+        <resena>Ofrece diferentes pastelitos que sin duda querras volver a comer!</resena>
+		<idZona>002</idZona>
+		<puntuacion> 4 </puntuacion>
+        <fechaIngreso>2013-10-23 08:30:00</fechaIngreso>
+        <usuarioIngreso>0002</usuarioIngreso>
+		<latitud> -2.144901</latitud>
+		<longitud> -79.965698</longitud>
         <activo>true</activo>
     </restaurante>
     <restaurante>
         <id>0003</id>
-        <nombre>Local 3</nombre>
-        <direccion>FIMCBOR arriba</direccion>
-        <idZona>002</idZona>
-        <resena>Vendemos colas, papitas, tortolines, caramelos. Somos el quiosco mas completo.</resena>
-        <latidud></latidud>
-        <longitud></longitud>
-        <fechaIngreso>2013-11-21 11:00:00</fechaIngreso>
-        <usuarioIngreso>admin</usuarioIngreso>
-        <activo>true</activo>
-    </restaurante>
-    <restaurante>
-        <id>0004</id>
-        <nombre>Local 4</nombre>
-        <direccion>CN Basico nuevo</direccion>
+        <nombre>ComoiMeVoi</nombre>
+        <direccion>Plazoleta de Mecanica</direccion>
+		<resena>Vendemos colas, juegos, tortillas, muchines, bollos. Atencion todo el dia</resena>
         <idZona>003</idZona>
-        <resena>Local 4 es lo que necesitabas para calmar tu hambre. Que mejor que estudiar con un combito? No olvides visitarnos.</resena>
-        <latidud></latidud>
-        <longitud></longitud>
-        <fechaIngreso>2013-11-21 11:00:00</fechaIngreso>
-        <usuarioIngreso>admin</usuarioIngreso>
-        <activo>true</activo>
-    </restaurante>
-    <restaurante>
-        <id>0005</id>
-        <nombre>Local 5</nombre>
-        <direccion>CN Basico viejo</direccion>
-        <idZona>004</idZona>
-        <resena>Nos especializamos en comida rapida y desayunos ecuatorianos.</resena>
-        <latidud></latidud>
-        <longitud></longitud>
-        <fechaIngreso>2013-11-21 11:00:00</fechaIngreso>
-        <usuarioIngreso>admin</usuarioIngreso>
+        <puntuacion> 4 </puntuacion>
+        <fechaIngreso>2013-08-20 09:57:00</fechaIngreso>
+        <usuarioIngreso>0003</usuarioIngreso>
+		<latitud> -2.144853</latitud>
+		<longitud> -79.966135</longitud>
         <activo>true</activo>
     </restaurante>
 </restaurantes>
