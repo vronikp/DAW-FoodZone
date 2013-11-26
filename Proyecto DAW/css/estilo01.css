@@ -28,14 +28,7 @@ header
     color: #706f6e;
 }
 
-#map-canvas
-{
-	margin-top:25px;
-	margin-left:85px;
-	width:70%;
-	height:30%;
 
-}
 
 #logo
 {
@@ -112,7 +105,10 @@ nav ul li a
 
 #contenido
 {
-    width:60%;
+	margin-top: 30px;
+	padding-top:30px;
+    width:700px;
+	height:500px;
     margin-right:auto;
     margin-left:auto;
     padding: 10px;

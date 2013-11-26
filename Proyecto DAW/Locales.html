@@ -4,19 +4,18 @@
         <title>Food zone</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="CSS/estilo01.css" />
-		<script type="text/javascript"
+		<script 
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn1VT66c9YP05wsQ05_rEv6z6mqi04r2o&sensor=true">
 		</script>
-		<script type="text/javascript">
-			function initialize() {
-			
-			var mapOptions = {
-				center: new google.maps.LatLng(-34.397, 150.644),
-				zoom: 3
-			};
-			alert("hey");
-			var map = new google.maps.Map(document.getElementById("map-canvas"),
-			mapOptions);
+		<script>
+			function initialize()
+			{
+				var mapProp = {
+					center:new google.maps.LatLng(-2.14555,-79.96642),
+					zoom:14,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				var map=new google.maps.Map(document.getElementById("contenido"),mapProp);
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
@@ -82,11 +81,9 @@
 		
         <section id = "contenido">
 		<!--Aqui va todo el contenido del sitio, slideshow, mapa, bares, contacto -->
-prueba
 			<div id = "map-canvas">
-				test
-			</div>
 			
+			</div>
 		</section>
         
 
