@@ -20,11 +20,36 @@ function mostrarZona(e){
     listaZona = xmlZona.getElementsByTagName("zonas")[0].getElementsByTagName("zona");
     for (i=0; i< listaZona.length;i++){
         li = document.createElement('li');
-        li.innerHTML = listaZona[i].getElementsByTagName("nombre");
-        li.name= listaZona[i].getElementsByTagName("id");
+        a = document.createElement('a');
+        a.innerHTML = listaZona[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        a.name= listaZona[i].getElementsByTagName("id");
+        a.href = "#";
+        li.appendChild(a);
+        listaLocalZona.appendChild(li);
     }
 }
 
+function obtenerTipo(){
+    var request;
+    request = new XMLHttpRequest();
+    request.addEventListener('load', mostrarTipo,false);
+    request.open("GET","xml/TipoLocal.xml");
+    request.send();
+}
+
+function mostrarTipo(e){
+    xmlTipo = e.target.responseXML;
+    listaTipo = xmlTipo.getElementsByTagName("tiposLocal")[0].getElementsByTagName("tipoLocal");
+    for (i=0; i< listaTipo.length;i++){
+        li = document.createElement('li');
+        a = document.createElement('a');
+        a.innerHTML = listaTipo[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        a.name= listaTipo[i].getElementsByTagName("id");
+        a.href = "#";
+        li.appendChild(a);
+        listaLocalTipo.appendChild(li);
+    }
+}
 function obtenerRestaurante(){
     var request;
     request = new XMLHttpRequest();
