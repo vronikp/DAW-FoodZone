@@ -6,4 +6,16 @@
         <latidud></latidud>
         <longitud></longitud>
     </zona>
+    <zona>
+        <id>002</id>
+        <nombre>Ciclo Basico</nombre>
+        <latidud></latidud>
+        <longitud></longitud>
+    </zona>
+    <zona>
+        <id>003</id>
+        <nombre>CELEX</nombre>
+        <latidud></latidud>
+        <longitud></longitud>
+    </zona>
 </zonas>

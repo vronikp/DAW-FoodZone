@@ -24,12 +24,19 @@
 		<nav>
 			<ul>
 			    <li><a class="general" href="#">Inicio</a></li>
-                <li><a class="general" href="#">Tipo Local</a></li>
-                <li><a class="general" href="#">Locales por Zona</a></li>
+                <li><a class="general" href="#">Tipo Local</a>
+                    <ul id="listaLocalTipo">
+                    </ul>
+                </li>
+                <li><a class="general" href="#">Locales por Zona</a>
+                    <ul id="listaLocalZona">
+                    </ul>
+                </li>
                 <li><a class="general" href="#">Ranking</a></li>
                 <li><a class="admin" href="#">Administrar Usuarios</a></li>
                 <li><a class="adminLocal" href="#">Administrar Local</a></li>
                 <li><a class="usuario" href="#">Favoritos</a></li>
+                <li><a class="usuario" href="#">Quiero Comer YA!</a></li>
             </ul>
 		</nav>
 		
@@ -47,12 +54,10 @@
 		    </div>
 		
 		    <div id = "login">
-			    <form> 
-				    Usuario: <input type = "text" name = "txt_usuario"> <br>
-				    Contrase&ntilde;a: <input type = "password" name = "txt_password"> <br>
-				    <input type = "submit" value = "Iniciar sesi&oacute;n">
-			    </form>		
-		    </div>		
+			    <label>Usuario:</label> <input type = "text" name = "txtUsuario" required> <br>
+				<label>Contrase&ntilde;a:</label> <input type = "password" name = "txtPassword" required> <br>
+				<input id="btnIniciarSesion" type = "submit" value = "Iniciar sesi&oacute;n">
+		    </div>	
 		
 		
 		</aside>
