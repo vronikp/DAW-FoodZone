@@ -41,7 +41,35 @@
 		</nav>
 		
 		<aside id="asideIzq">
-		    <div id = "menuAside">
+            <form id="frmBusqueda" name="frm" action="/searchresults.html" method="get">
+                <h3 class="tituloBusqueda">
+                    <img class="search-box-title-icon" width="24" height="23" alt="" src="http://q-ec.bstatic.com/static/img/affiliate_base/sb_border_gradient/13cf80cf601748203235e25e69935667e09d112a.png"></img>
+                    Buscar locales
+                </h3>
+                <div class="contenedorOpcionBusqueda">
+                <label class="labelBusqueda">Ubicaci&oacute;n/Zona:</label> 
+                <select id="selectZona">
+	            </select>
+                </div>
+                <div class="contenedorOpcionBusqueda">
+                <label class="labelBusqueda">Tipo de Local</label>
+                <select id="selectTipo">
+	            </select>
+                </div>
+                <div class="contenedorOpcionBusqueda">
+                <label class="labelBusqueda">Fecha desde:</label>
+                <input id="dateDesde" class="inputDate" type="date" required/>
+                </div>
+                <div class="contenedorOpcionBusqueda">
+                <label class="labelBusqueda">Fecha hasta</label>
+                <input id="dateHasta" class="inputDate" type="date" required/>
+                </div>
+                <div class="contenedorOpcionBusqueda">
+                <input id="btnBuscar" type="button" value="Buscar"/>
+                </div>
+            </form>
+
+		    <!--<div id = "menuAside">
 			    <ul>
 				    <li>Inicio </li>
 				    <li>Bares </li>
@@ -51,18 +79,15 @@
 				    <li>Cont&aacute;ctanos</li>
 			    </ul>
 		
-		    </div>
-		
-		    <div id = "login">
+		    </div>-->
+		</aside>
+
+		<aside id="asideDer">
+            <div id = "login">
 			    <label>Usuario:</label> <input type = "text" name = "txtUsuario" required> <br>
 				<label>Contrase&ntilde;a:</label> <input type = "password" name = "txtPassword" required> <br>
 				<input id="btnIniciarSesion" type = "submit" value = "Iniciar sesi&oacute;n">
 		    </div>	
-		
-		
-		</aside>
-
-		<aside id="asideDer">
             <div id = "mapa">
 		        MAPA
 		    </div>

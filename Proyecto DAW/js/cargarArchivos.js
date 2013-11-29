@@ -18,14 +18,22 @@ function obtenerZona(){
 function mostrarZona(e){
     xmlZona = e.target.responseXML;
     listaZona = xmlZona.getElementsByTagName("zonas")[0].getElementsByTagName("zona");
+    selectZona.options[0] = new Option("Tu ubicación", 0);
     for (i=0; i< listaZona.length;i++){
+        var id =listaZona[i].getElementsByTagName("id");
+        var nombre = listaZona[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+
+        //Agregar a navigation bar
         li = document.createElement('li');
         a = document.createElement('a');
-        a.innerHTML = listaZona[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
-        a.name= listaZona[i].getElementsByTagName("id");
+        a.innerHTML = nombre;
+        a.name = id;
         a.href = "#";
         li.appendChild(a);
         listaLocalZona.appendChild(li);
+
+        //Agregar a lista para busqueda
+        selectZona.options[i + 1] = new Option(nombre, id);
     }
 }
 
@@ -40,14 +48,22 @@ function obtenerTipo(){
 function mostrarTipo(e){
     xmlTipo = e.target.responseXML;
     listaTipo = xmlTipo.getElementsByTagName("tiposLocal")[0].getElementsByTagName("tipoLocal");
+    selectTipo.options[0] = new Option("Todos", 0);
     for (i=0; i< listaTipo.length;i++){
+        var id =listaTipo[i].getElementsByTagName("id");
+        var nombre = listaTipo[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+
+        //Agregar a navigation bar
         li = document.createElement('li');
         a = document.createElement('a');
-        a.innerHTML = listaTipo[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
-        a.name= listaTipo[i].getElementsByTagName("id");
+        a.innerHTML = nombre;
+        a.name = id;
         a.href = "#";
         li.appendChild(a);
         listaLocalTipo.appendChild(li);
+
+        //Agregar a lista para busqueda
+        selectTipo.options[i + 1] = new Option(nombre, id);
     }
 }
 function obtenerRestaurante(){

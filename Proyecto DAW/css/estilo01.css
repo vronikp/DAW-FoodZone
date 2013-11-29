@@ -1,6 +1,6 @@
 ﻿body
 {
-    color:#BFC5C9;
+    font-family: Andalus;
 }
 
 #platos{
@@ -55,14 +55,15 @@ header figure
 #asideIzq
 {
     width:20%;
-    clear:both;
     float:left;
+    margin: 10px 10px;
 }
 
 #asideDer
 {
     width:20%;
     float:right;
+    margin: 10px 0 0 10px;
 }
 
 footer
@@ -296,4 +297,44 @@ nav ul li a
 
 #menu ul li:first-child a:hover:after{
     border-bottom-color: #04acec; 
+}
+
+/*Estilo del formulario de busqueda*/
+#frmBusqueda{
+    background: linear-gradient(#FFAD00, #FF7F08);
+    border-radius: 5px; 
+}
+
+.tituloBusqueda{
+    padding: 10px;
+}
+
+.contenedorOpcionBusqueda{
+    padding: 3px 5px;
+}
+
+.contenedorOpcionBusqueda:last-of-Type{
+    padding: 3px 5px 10px;
+}
+
+.labelBusqueda{
+    width: 50%;
+    font-size: 1em;
+}
+
+#frmBusqueda select{
+    width: 50%;
+    float: right;
+}
+
+#btnBuscar{
+    background-color: #FFD056;
+    margin: 5% 35%;
+    width: 30%;
+    height: 30px;
+}
+
+.inputDate{
+    width: 50%;
+    float: right;
 }
