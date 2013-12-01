@@ -22,16 +22,6 @@ function mostrarZona(e){
     for (i=0; i< listaZona.length;i++){
         var id =listaZona[i].getElementsByTagName("id");
         var nombre = listaZona[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
-
-        //Agregar a navigation bar
-        li = document.createElement('li');
-        a = document.createElement('a');
-        a.innerHTML = nombre;
-        a.name = id;
-        a.href = "#";
-        li.appendChild(a);
-        listaLocalZona.appendChild(li);
-
         //Agregar a lista para busqueda
         selectZona.options[i + 1] = new Option(nombre, id);
     }
@@ -52,16 +42,6 @@ function mostrarTipo(e){
     for (i=0; i< listaTipo.length;i++){
         var id =listaTipo[i].getElementsByTagName("id");
         var nombre = listaTipo[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
-
-        //Agregar a navigation bar
-        li = document.createElement('li');
-        a = document.createElement('a');
-        a.innerHTML = nombre;
-        a.name = id;
-        a.href = "#";
-        li.appendChild(a);
-        listaLocalTipo.appendChild(li);
-
         //Agregar a lista para busqueda
         selectTipo.options[i + 1] = new Option(nombre, id);
     }
@@ -86,37 +66,6 @@ function mostrarRestaurante(e){
     resenaL3.innerHTML = listRestaurante[2].getElementsByTagName("resena")[0].firstChild.nodeValue;
 }
 
-function iniciarSesion(){
-    var request;
-    request = new XMLHttpRequest();
-    request.addEventListener('load', verificarUsuario, false);
-    request.open("GET", "xml/Usuarios.xml", true); //deberia hacerse con POST
-    request.send();
-}
-
-function verificarUsuario(e){
-    xmlUsuarios = e.target.responseXML;
-    listaUsuarios = xmlUsuarios.getElementsByTagName("usuarios")[0].getElementsByTagName("usuario");
-
-    for (i=0; i<listaUsuarios.length;i++){
-        if(listaUsuarios[i].getElementsByTagName("nombre")[0].firstChild.nodeValue==document.getElementsByName("txtUsuario")[0].value){
-            if(listaUsuarios[i].getElementsByTagName("activo")[0].firstChild.nodeValue=="true"){
-                if (listaUsuarios[i].getElementsByTagName("clave")[0].firstChild.nodeValue == document.getElementsByName("txtPassword")[0].value) {
-                    alert("Bienvenido, "+ listaUsuarios[i].getElementsByTagName("nombre")[0].firstChild.nodeValue);
-                    document.getElementById("login").style.display = 'none';
-                    document.getElementsByClassName("usuario")[0].style.display = 'block';
-                    document.getElementsByClassName("usuario")[1].style.display = 'block';
-                }else{
-                alert("Contrasena incorrecta");
-                }
-            }else{
-            alert("El usuario no se encuentra activo. Favor contactar con el Administrador.");
-            }
-            return;
-        }
-    }
-    alert("No existe el usuario");
-}
 
 
 window.addEventListener('load', inicializar, false);

@@ -5,7 +5,9 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="CSS/estilo01.css" />
         <link rel="stylesheet" href="CSS/estiloSlideShow.css" />
+        <link rel="stylesheet" href="CSS/estiloIndex.css" />
         <script src="js/cargarArchivos.js"></script>
+        <script src="js/scriptNavigation.js"></script>
         <link rel="icon" href="imagen/logo-3.jpg" />
 	</head>
 
@@ -32,14 +34,43 @@
                     <ul id="listaLocalZona">
                     </ul>
                 </li>
-                <li><a class="general" href="#">Ranking</a></li>
                 <li><a class="admin" href="#">Administrar Usuarios</a></li>
                 <li><a class="adminLocal" href="#">Administrar Local</a></li>
                 <li><a class="usuario" href="#">Favoritos</a></li>
                 <li><a class="usuario" href="#">Quiero Comer YA!</a></li>
+                <li class="redesSociales"><a href="#" class="general" id="InicioSesion">Iniciar sesi&oacute;n</a></li>
+                <li class="redesSociales"><a href="#" class="general" id="cierroSesion" style="display: none">Cerrar sesi&oacute;n</a></li>
+                <li class="redesSociales"><a href="http://twitter.com/#!/FoodZoneEc" class="social-tw textindent">Twitter</a></li>
+                <li class="redesSociales"><a href="http://facebook.com/FoodZoneEc" class="social-fb textindent">FB</a></li>
+
+
             </ul>
 		</nav>
 		
+        <!--Login div emergente-->
+        <div class="loginform" id="divLogin">
+            <form action="/ideas?destination=ideas" accept-charset="UTF-8" method="post" id="user-login-form">
+                <div>
+                    <div class="login-error"></div>
+                    <div class="form-item" id="edit-name-wrapper">
+                        <label for="edit-name">Usuario: <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" class="form-text required error">
+                    </div>
+                    <div class="form-item" id="edit-pass-wrapper">
+                        <label for="edit-pass">Contraseña: <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="password" name="pass" id="edit-pass" maxlength="60" size="15" class="form-text required error">
+                    </div>
+                    <input type="submit" name="op" id="edit-submit-1" value="Iniciar Sesion" class="form-submit">
+                    <div class="item-list">
+                        <ul>
+                            <li><a href="/usuario/registro.html" title="Create a new user account." class="gi-user-register">Registrarse</a></li>
+                            <li class="last"><a href="/usuario/contrasena.html" title="Request new password via e-mail.">Olvid&oacute; su clave</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+
 		<aside id="asideIzq">
             <form id="frmBusqueda" name="frm" action="/searchresults.html" method="get">
                 <h3 class="tituloBusqueda">
@@ -82,54 +113,41 @@
 		    </div>-->
 		</aside>
 
-		<aside id="asideDer">
-            <div id = "login">
-			    <label>Usuario:</label> <input type = "text" name = "txtUsuario" required> <br>
-				<label>Contrase&ntilde;a:</label> <input type = "password" name = "txtPassword" required> <br>
-				<input id="btnIniciarSesion" type = "submit" value = "Iniciar sesi&oacute;n">
-		    </div>	
-            <div id = "mapa">
-		        MAPA
-		    </div>
-            <div id="redesSociales">
-                Redes sociales y otros
-            </div>
-		</aside>
-		
         <!--SLIDESHOW-->
-        <span id="sl_play" class="sl_command">&nbsp;</span>
-	    <span id="sl_pause" class="sl_command">&nbsp;</span>
+        
 	
+	    <div id="contenedorSlideshow">
+            <span id="sl_play" class="sl_command">&nbsp;</span>
+	        <span id="sl_pause" class="sl_command">&nbsp;</span>
+	        <div id="slideshow">
 	
-	    <section id="slideshow">
-	
-		    <a class="play_commands pause" href="#sl_pause" title="Maintain paused">Pause</a>
-		    <a class="play_commands play" href="#sl_play" title="Play the animation">Play</a>
+		        <a class="play_commands pause" href="#sl_pause" title="Maintain paused">Pause</a>
+		        <a class="play_commands play" href="#sl_play" title="Play the animation">Play</a>
 		
-		    <div class="container">
-			    <div class="c_slider"></div>
-			    <div class="slider">
-				    <figure>
-					    <img src="imagen/slideshow/1.jpg" alt="" width="640" height="310" />
-					    <figcaption>Tacos de Local 1</figcaption>
-				    </figure><!--
-				    --><figure>
-					    <img src="imagen/slideshow/2.jpg" alt="" width="640" height="310" />
-					    <figcaption>Pincho y chorizos asados de Local 2</figcaption>
-				    </figure><!--
-				    --><figure>
-					    <img src="imagen/slideshow/3.jpg" alt="" width="640" height="310" />
-					    <figcaption>Pizza de Local 3</figcaption>
-				    </figure><!--
-				    --><figure>
-					    <img src="imagen/slideshow/4.jpg" alt="" width="640" height="310" />
-					    <figcaption>Hamburguesa de pollo de Local 4</figcaption>
-				    </figure>
-			    </div>
-		    </div>
+		        <div class="container">
+			        <div class="c_slider"></div>
+			        <div class="slider">
+				        <figure>
+					        <img src="imagen/slideshow/1.jpg" alt="" width="640" height="310" />
+					        <figcaption>Tacos de Local 1</figcaption>
+				        </figure><!--
+				        --><figure>
+					        <img src="imagen/slideshow/2.jpg" alt="" width="640" height="310" />
+					        <figcaption>Pincho y chorizos asados de Local 2</figcaption>
+				        </figure><!--
+				        --><figure>
+					        <img src="imagen/slideshow/3.jpg" alt="" width="640" height="310" />
+					        <figcaption>Pizza de Local 3</figcaption>
+				        </figure><!--
+				        --><figure>
+					        <img src="imagen/slideshow/4.jpg" alt="" width="640" height="310" />
+					        <figcaption>Hamburguesa de pollo de Local 4</figcaption>
+				        </figure>
+			        </div>
+		        </div>
 		
-	    </section>
-	
+	        </div>
+	    </div>
 	
         <section id = "contenido">
 		<!--Aqui va todo el contenido del sitio, slideshow, mapa, bares, contacto -->
@@ -170,6 +188,7 @@
             </div>
 		</section>
         
+        <div style="clear: both"></div> 
 
 		<footer>
 			Proyecto de Desarrollo de Aplicaciones Web <br>
