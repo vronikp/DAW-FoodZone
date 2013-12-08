@@ -3,19 +3,44 @@
     <zona>
         <id>001</id>
         <nombre>FIEC</nombre>
-        <latidud></latidud>
-        <longitud></longitud>
+        <latidud>-2.144684</latidud>
+        <longitud>-79.967646</longitud>
     </zona>
     <zona>
         <id>002</id>
-        <nombre>Ciclo Basico</nombre>
-        <latidud></latidud>
-        <longitud></longitud>
+        <nombre>Ciclo Básico</nombre>
+        <latidud>-2.14655</latidud>
+        <longitud>-79.966908</longitud>
     </zona>
     <zona>
         <id>003</id>
         <nombre>CELEX</nombre>
+        <latidud>-2.148402</latidud>
+        <longitud>-79.967649</longitud>
+    </zona>
+	<zona>
+        <id>004</id>
+        <nombre>EDCOM</nombre>
+        <latidud>-2.143719</latidud>
+        <longitud>-79.962356</longitud>
+    </zona>
+	<zona>
+        <id>005</id>
+        <nombre>FIMCBOR</nombre>
         <latidud></latidud>
         <longitud></longitud>
     </zona>
+	<zona>
+        <id>006</id>
+        <nombre>INTEC</nombre>
+        <latidud></latidud>
+        <longitud></longitud>
+    </zona>
+	<zona>
+        <id>007</id>
+        <nombre>PARCON</nombre>
+        <latidud></latidud>
+        <longitud></longitud>
+    </zona>
+	
 </zonas>
