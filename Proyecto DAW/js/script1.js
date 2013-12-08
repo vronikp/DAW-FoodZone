@@ -6,8 +6,9 @@ function get_platos(){
     var request;
     request = new XMLHttpRequest();
     request.addEventListener('load', show_platos, false);
-    request.open("GET", "xml/platos.xml", true);
+    request.open("GET", "xml/platos.xml", false);
     request.send();
+	alert(request.readyState);
 }
 
 function show_platos(e){

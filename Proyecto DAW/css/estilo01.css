@@ -113,15 +113,34 @@ nav ul li a
 
 #contenido
 {
-	margin-top: 30px;
-	padding-top:30px;
-    width:75%;
-    margin-right: auto;
-    margin-left:auto;
+	margin-left:30%;
+	margin-top:2%;
+    width:600px;
+	height:400px;
     padding: 10px;
-    float: right;
+}
+#mapa{
+	width:500px;
+	height:380px;
+
 }
 
+#infoWindow{
+	width:300px;
+	height:200px;
+	text-align: left;
+	margin-left:15px;
+	background: #f1da36; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #f1da36 29%, #fefcea 90%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(29%,#f1da36), color-stop(90%,#fefcea)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #f1da36 29%,#fefcea 90%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #f1da36 29%,#fefcea 90%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #f1da36 29%,#fefcea 90%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #f1da36 29%,#fefcea 90%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1da36', endColorstr='#fefcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+}
 #contenidoTop3{
     list-style:none;
     margin: 10px 10px;
@@ -501,3 +520,10 @@ box-shadow: 0 2px 1px #9c9c9c;
 color: #FFF;
 background:url(images/login_btn_o.gif);
 }*/
+
+
+footer {
+    clear:both;
+    width: 100%;
+    bottom: 0;       
+}
