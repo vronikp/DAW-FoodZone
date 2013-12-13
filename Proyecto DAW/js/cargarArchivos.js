@@ -66,6 +66,8 @@ function mostrarRestaurante(e){
     resenaL3.innerHTML = listRestaurante[2].getElementsByTagName("resena")[0].firstChild.nodeValue;
 }
 
-
+function iniciarSesion(){
+    
+}
 
 window.addEventListener('load', inicializar, false);

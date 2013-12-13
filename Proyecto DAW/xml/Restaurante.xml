@@ -14,6 +14,7 @@
 		<latitud> -2.144947</latitud>
 		<longitud> -79.96617</longitud>
         <activo>true</activo>
+        <idTipo>001</idTipo>
     </restaurante>
     <restaurante>
         <id>0002</id>
@@ -27,6 +28,7 @@
 		<latitud> -2.144901</latitud>
 		<longitud> -79.965698</longitud>
         <activo>true</activo>
+        <idTipo>001</idTipo>
     </restaurante>
     <restaurante>
         <id>0003</id>
@@ -40,5 +42,6 @@
 		<latitud> -2.144853</latitud>
 		<longitud> -79.966135</longitud>
         <activo>true</activo>
+        <idTipo>002</idTipo>
     </restaurante>
 </restaurantes>

@@ -23,7 +23,7 @@ function getZone(){
 function showZone(e){
     xmlZona = e.target.responseXML;
     listaZona = xmlZona.getElementsByTagName("zonas")[0].getElementsByTagName("zona");
-    selectZona.options[0] = new Option("Tu ubicación", 0);
+   // selectZona.options[0] = new Option("Tu ubicación", 0);
     for (i=0; i< listaZona.length;i++){
         var id =listaZona[i].getElementsByTagName("id");
         var nombre = listaZona[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
@@ -31,7 +31,7 @@ function showZone(e){
         a = document.createElement('a');
         a.innerHTML = nombre;
         a.name = id;
-        a.href = "#";
+        a.href = "locales.html?t=Zona&n="+nombre;
         li.appendChild(a);
         listaLocalZona.appendChild(li);
     }
@@ -48,7 +48,7 @@ function getType(){
 function showType(e){
     xmlTipo = e.target.responseXML;
     listaTipo = xmlTipo.getElementsByTagName("tiposLocal")[0].getElementsByTagName("tipoLocal");
-    selectTipo.options[0] = new Option("Todos", 0);
+    //selectTipo.options[0] = new Option("Todos", 0);
     for (i=0; i< listaTipo.length;i++){
         var id =listaTipo[i].getElementsByTagName("id");
         var nombre = listaTipo[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
@@ -58,7 +58,7 @@ function showType(e){
         a = document.createElement('a');
         a.innerHTML = nombre;
         a.name = id;
-        a.href = "#";
+        a.href = "locales.html?t=Tipo&n="+nombre;
         li.appendChild(a);
         listaLocalTipo.appendChild(li);
     }
