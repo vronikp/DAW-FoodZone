@@ -1,6 +1,6 @@
 var map; //mapa global
-var markers = []; //añade markers
-var lsContent = [];
+var markers = []; //arreglo markers
+var infoWindows = []; //arreglo infowindows
 
 function init(){
 	get_zona();
@@ -21,6 +21,14 @@ function show_zona(e){
            
 	var select = document.getElementById("selectZona");
 	var ls;
+	
+	var option = document.createElement('option');
+	text = "Todo";
+	value = 0;
+	option.text = text;
+	option.value =value;
+	select.add(option);	
+	
 	ls = xml.getElementsByTagName("zonas")[0].getElementsByTagName("zona");
 	for(i =0; i < ls.length; i++){
 		var option = document.createElement('option');
@@ -29,7 +37,7 @@ function show_zona(e){
 		value = ls[i].getElementsByTagName("id")[0].firstChild.nodeValue;
 		option.text = text;
 		option.value = value;
-		select.add(option,0);
+		select.add(option);
 	}
 }
 
@@ -45,6 +53,14 @@ function show_tipo(e){
 	var xml = e.target.responseXML;
 	var select = document.getElementById("selectTipo");
 	var ls;
+	
+	var option = document.createElement('option');
+	text = "Todo";
+	value = 0;
+	option.text = text;
+	option.value =value;
+	select.add(option);
+	
 	ls = xml.getElementsByTagName("tiposLocal")[0].getElementsByTagName("tipoLocal");
 	for(i = 0; i < ls.length; i++){
 		var option = document.createElement('option');
@@ -53,7 +69,7 @@ function show_tipo(e){
 		value = ls[i].getElementsByTagName("id")[0].firstChild.nodeValue;
 		option.text = text;
 		option.value = value;
-		select.add(option,0);
+		select.add(option);
 	}
 }
 
@@ -76,7 +92,7 @@ function initialize(){
 }
 
 function buildByZona(idZona){
-	clearInfoWindow();
+	clearInfoWindows();
 	ls = ls_rest();
 	for(i = 0; i < ls.length; i++){
 		var zona = ls[i].getElementsByTagName("idZona")[0].firstChild.nodeValue;
@@ -87,18 +103,23 @@ function buildByZona(idZona){
 			var direccion = ls[i].getElementsByTagName("direccion")[0].firstChild.nodeValue;
 			var punt = ls[i].getElementsByTagName("puntuacion")[0].firstChild.nodeValue;
 			var coord = new google.maps.LatLng(lat,lng);
-			var marker = new google.maps.Marker({ position: coord, title: nombre});
+			var marker = new google.maps.Marker({ position: coord, title: nombre, infoWindowIndex: i});	
+			
 			var content = '<div id = "infoWindow"> <h5> Nombre del Restaurante: </h5>' + nombre + 
-						'<br> <h5> Direcci&oacute;n: </h5>' + direccion + '<br> <h5> Calificaci&oacute;n:</h5>' + 
-						punt + '</div>';
-			lsContent.push(content);
-			markers.push(marker);			
+						'<br> <h5> Direcci&oacute;n: </h5>' +  direccion + '<br> <h5> Calificaci&oacute;n:</h5>' + punt + '						<div>';
+			var infoWindow = new google.maps.InfoWindow({content: content});
+			
+			google.maps.event.addListener(marker,'click', function (event){
+												infoWindows[this.infoWindowIndex].open(map,this);});
+	
+			infoWindows.push(infoWindow);
+			markers.push(marker);		
 		}
 	}
 }
 
 function buildByTipo(idTipo){
-	clearInfoWindow();
+	clearInfoWindows();
 	ls = ls_rest();
 	for(i = 0; i < ls.length; i++){
 		var tipo = ls[i].getElementsByTagName("idTipo")[0].firstChild.nodeValue;
@@ -109,22 +130,27 @@ function buildByTipo(idTipo){
 			var direccion = ls[i].getElementsByTagName("direccion")[0].firstChild.nodeValue;
 			var punt = ls[i].getElementsByTagName("puntuacion")[0].firstChild.nodeValue;
 			var coord = new google.maps.LatLng(lat,lng);
-			var marker = new google.maps.Marker({ position: coord, title: nombre});
+			var marker = new google.maps.Marker({ position: coord, title: nombre, infoWindowIndex: i});	
+			
 			var content = '<div id = "infoWindow"> <h5> Nombre del Restaurante: </h5>' + nombre + 
-						'<br> <h5> Direcci&oacute;n: </h5>' + direccion + '<br> <h5> Calificaci&oacute;n:</h5>' + 
-						punt + '</div>';
-			lsContent.push(content);
-			markers.push(marker);			
+						'<br> <h5> Direcci&oacute;n: </h5>' +  direccion + '<br> <h5> Calificaci&oacute;n:</h5>' + punt + '						<div>';
+			var infoWindow = new google.maps.InfoWindow({content: content});
+			
+			google.maps.event.addListener(marker,'click', function (event){
+												infoWindows[this.infoWindowIndex].open(map,this);});
+	
+			infoWindows.push(infoWindow);
+			markers.push(marker);		
 		}
 	}
 }
 
 function buildByTipoZona(idTipo, idZona){
-	clearInfoWindow();
+	clearInfoWindows();
 	ls = ls_rest();
 	for(i = 0; i < ls.length; i++){
 		var zona = ls[i].getElementsByTagName("idZona")[0].firstChild.nodeValue;
-		var tipo = ls[i].getElementsByTagName("idZona")[0].firstChild.nodeValue;
+		var tipo = ls[i].getElementsByTagName("idTipo")[0].firstChild.nodeValue;
 		if(zona == idZona && tipo == idTipo ){
 			var nombre = ls[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
 			var lat = ls[i].getElementsByTagName("latitud")[0].firstChild.nodeValue;
@@ -132,18 +158,25 @@ function buildByTipoZona(idTipo, idZona){
 			var direccion = ls[i].getElementsByTagName("direccion")[0].firstChild.nodeValue;
 			var punt = ls[i].getElementsByTagName("puntuacion")[0].firstChild.nodeValue;
 			var coord = new google.maps.LatLng(lat,lng);
-			var marker = new google.maps.Marker({ position: coord, title: nombre});
+
+	 		var marker = new google.maps.Marker({ position: coord, title: nombre, infoWindowIndex: i});	
+			
 			var content = '<div id = "infoWindow"> <h5> Nombre del Restaurante: </h5>' + nombre + 
-						'<br> <h5> Direcci&oacute;n: </h5>' + direccion + '<br> <h5> Calificaci&oacute;n:</h5>' + 
-						punt + '</div>';
-			lsContent.push(content);
-			markers.push(marker);			
+						'<br> <h5> Direcci&oacute;n: </h5>' +  direccion + '<br> <h5> Calificaci&oacute;n:</h5>' + punt + '						<div>';
+			var infoWindow = new google.maps.InfoWindow({content: content});
+			
+			google.maps.event.addListener(marker,'click', function (event){
+												infoWindows[this.infoWindowIndex].open(map,this);});
+	
+			infoWindows.push(infoWindow);
+			markers.push(marker);		
 		}
 	}
 }
 
 function buildAll(){
 	ls = ls_rest();
+	clearInfoWindows();
 	for(i = 0; i < ls.length; i++){
 		var nombre = ls[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
 		var lat = ls[i].getElementsByTagName("latitud")[0].firstChild.nodeValue;
@@ -151,10 +184,17 @@ function buildAll(){
         var direccion = ls[i].getElementsByTagName("direccion")[0].firstChild.nodeValue;
         var punt = ls[i].getElementsByTagName("puntuacion")[0].firstChild.nodeValue;    
 		var coord = new google.maps.LatLng(lat,lng);
-		var marker = new google.maps.Marker({ position: coord, title: nombre});	
+		
+		var marker = new google.maps.Marker({ position: coord, title: nombre, infoWindowIndex: i});	
+		
 		var content = '<div id = "infoWindow"> <h5> Nombre del Restaurante: </h5>' + nombre + 
 					'<br> <h5> Direcci&oacute;n: </h5>' +  direccion + '<br> <h5> Calificaci&oacute;n:</h5>' + punt + '						<div>';
-        lsContent.push(content);
+		var infoWindow = new google.maps.InfoWindow({content: content});
+		
+		google.maps.event.addListener(marker,'click', function (event){
+											infoWindows[this.infoWindowIndex].open(map,this);});
+
+		infoWindows.push(infoWindow);
 		markers.push(marker);
 	}
 }
@@ -178,8 +218,8 @@ function deleteMarkers(){
 	markers = [];
 }
 
-function clearInfoWindow(){
-	infowindow = [];
+function clearInfoWindows(){
+	infowindows = [];
 	deleteMarkers();
 }
      
@@ -214,7 +254,25 @@ function build(){
 	var vZona = sZona.options[sZona.selectedIndex].value;
 	var sTipo = document.getElementById('selectTipo');
 	var vTipo = sTipo.options[sTipo.selectedIndex].value;
+
+	if(vZona !='0'&& vTipo == '0'){
+		deleteMarkers();
+		buildByZona(vZona);
+		showMarkers();
+	}
 	
+	else if(vZona == '0'&& vTipo != '0'){
+		deleteMarkers();
+		buildByTipo(vTipo);
+		showMarkers();
+	}
+	
+	else if(vZona != '0' && vTipo != '0'){
+		deleteMarkers();
+		buildByTipoZona(vTipo, vZona);
+		showMarkers()
+	}
+
 }
   
 window.addEventListener('load', init, false);
