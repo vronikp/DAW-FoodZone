@@ -86,6 +86,18 @@ footer
     display:none;
 }
 
+/*#contenidoTop3{
+    list-style:none;
+    margin: 10px 10px;
+    padding:0;
+    float:left;
+}
+
+#contenidoTop3 div{
+    margin: 5px 5px 0 5px;
+    padding:0;
+}*/
+
 #contenido
 {
 	margin-left:20%;
@@ -95,6 +107,7 @@ footer
 #contenidoTop3 .top3Local{
     width: 30%;
     margin: 0 1.3%;
+    float:left;
 }
 
 #mapa{
@@ -119,18 +132,7 @@ footer
 
 
 }
-#contenidoTop3{
-    list-style:none;
-    margin: 10px 10px;
-    padding:0;
-    float:left;
-}
 
-#contenidoTop3 div{
-    margin: 5px 5px 0 5px;
-    padding:0;
-    float:left;
-}
 
 /*CSS Para menu desplegable*/
 #menu{
