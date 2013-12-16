@@ -57,13 +57,94 @@ function obtenerRestaurante(){
 
 function mostrarRestaurante(e){
     var xml = e.target.responseXML;
-    listRestaurante = xml.getElementsByTagName("restaurantes")[0].getElementsByTagName("restaurante");
-    nombreL1.innerHTML = listRestaurante[0].getElementsByTagName("nombre")[0].firstChild.nodeValue;
-    resenaL1.innerHTML = listRestaurante[0].getElementsByTagName("resena")[0].firstChild.nodeValue;
-    nombreL2.innerHTML = listRestaurante[1].getElementsByTagName("nombre")[0].firstChild.nodeValue;
-    resenaL2.innerHTML = listRestaurante[1].getElementsByTagName("resena")[0].firstChild.nodeValue;
-    nombreL3.innerHTML = listRestaurante[2].getElementsByTagName("nombre")[0].firstChild.nodeValue;
-    resenaL3.innerHTML = listRestaurante[2].getElementsByTagName("resena")[0].firstChild.nodeValue;
+    listaLocales = xml.getElementsByTagName("restaurantes")[0].getElementsByTagName("restaurante");
+    if(listaLocales.length>0){
+        div = document.createElement('div');
+        div.className = "top3Local";
+
+        h3 = document.createElement('h3');
+        h3.className = "nombreLocalT3";
+        h3.innerHTML = listaLocales[0].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+
+        fig = document.createElement('figure');
+        fig.className = "figLocalT3";
+        img = document.createElement('img');
+        img.src="imagen/"+listaLocales[0].getElementsByTagName("nombre")[0].firstChild.nodeValue+"-principal.png";
+        img.alt=listaLocales[0].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        img.width = 100;
+        img.height = 100;
+        //figcap = document.createElement('figcaption');
+        //figcap.innerHTML=listaLocales[0].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        fig.appendChild(img);
+
+        p = document.createElement('p');
+        p.className = "pLocalT3";
+        p.innerHTML = listaLocales[0].getElementsByTagName("resena")[0].firstChild.nodeValue;
+
+        div.appendChild(h3);
+        div.appendChild(fig);
+        div.appendChild(p);
+
+        contenidoTop3.appendChild(div);
+    }
+    if (listaLocales.length > 1) {
+        div = document.createElement('div');
+        div.className = "top3Local";
+
+        h3 = document.createElement('h3');
+        h3.className = "nombreLocalT3";
+        h3.innerHTML = listaLocales[1].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+
+        fig = document.createElement('figure');
+        fig.className = "figLocalT3";
+        img = document.createElement('img');
+        img.src="imagen/"+listaLocales[1].getElementsByTagName("nombre")[0].firstChild.nodeValue+"-principal.png";
+        img.alt=listaLocales[1].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        img.width = 100;
+        img.height = 100;
+        //figcap = document.createElement('figcaption');
+        //figcap.innerHTML=listaLocales[0].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        fig.appendChild(img);
+
+        p = document.createElement('p');
+        p.className = "pLocalT3";
+        p.innerHTML = listaLocales[1].getElementsByTagName("resena")[0].firstChild.nodeValue;
+
+        div.appendChild(h3);
+        div.appendChild(fig);
+        div.appendChild(p);
+
+        contenidoTop3.appendChild(div);
+    }
+    if (listaLocales.length > 2) {
+        div = document.createElement('div');
+        div.className = "top3Local";
+
+        h3 = document.createElement('h3');
+        h3.className = "nombreLocalT3";
+        h3.innerHTML = listaLocales[2].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+
+        fig = document.createElement('figure');
+        fig.className = "figLocalT3";
+        img = document.createElement('img');
+        img.src="imagen/"+listaLocales[2].getElementsByTagName("nombre")[0].firstChild.nodeValue+"-principal.png";
+        img.alt=listaLocales[2].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        img.width = 100;
+        img.height = 100;
+        //figcap = document.createElement('figcaption');
+        //figcap.innerHTML=listaLocales[2].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        fig.appendChild(img);
+
+        p = document.createElement('p');
+        p.className = "pLocalT3";
+        p.innerHTML = listaLocales[2].getElementsByTagName("resena")[0].firstChild.nodeValue;
+
+        div.appendChild(h3);
+        div.appendChild(fig);
+        div.appendChild(p);
+
+        contenidoTop3.appendChild(div);
+    }
 }
 
 function iniciarSesion(){

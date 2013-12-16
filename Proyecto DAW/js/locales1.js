@@ -1,7 +1,11 @@
 var tipoSeleccion;
 var nombreSeleccion;
+var idSeleccion;
+var listaLocales;
 
 function init(){
+    //while (listaLocales.firstChild) listaLocales.removeChild(listaLocales.firstChild);
+    listaLocales = new Array();
     paresParametros = leerGET();
     tituloBusqueda.innerHTML = paresParametros["t"] +" - "+paresParametros["n"];
     tipoSeleccion = paresParametros["t"];
@@ -35,7 +39,7 @@ function showZoneAside(e){
         var nombre = listaZona[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
         //idParaCargarLocales = id;
         li = document.createElement('li');
-        li.class = "listaOpciones";
+        li.className = "listaOpciones";
         a = document.createElement('a');
         a.innerHTML = nombre;
         a.name = id;
@@ -47,6 +51,9 @@ function showZoneAside(e){
         li.appendChild(a);
         li.appendChild(ul);
         listaTipoZona.appendChild(li);
+        if(nombreSeleccion==nombre){
+            idSeleccion = id;
+        }
     }
     getLocalesAside();
 }
@@ -66,7 +73,7 @@ function showTypeAside(e){
         var id =listaTipo[i].getElementsByTagName("id")[0].firstChild.nodeValue;
         var nombre = listaTipo[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
         li = document.createElement('li');
-        li.class = "listaOpciones";
+        li.className = "listaOpciones";
         a = document.createElement('a');
         a.innerHTML = nombre;
         a.name = id;
@@ -78,6 +85,9 @@ function showTypeAside(e){
         li.appendChild(a);
         li.appendChild(ul);
         listaTipoZona.appendChild(li);
+        if(nombreSeleccion==nombre){
+            idSeleccion = id;
+        }
     }
     getLocalesAside();
 }
@@ -112,6 +122,9 @@ function showLocalesAside(e){
                     a.href = "local.html?n="+nombre;
                     li.appendChild(a);
                     ulActual.appendChild(li);
+                    if(idSeleccion==idZona){
+                        listaLocales.push(listaLocal[i]);
+                    }
                 }
             }else if(tipoSeleccion=="Tipo"){
                 var idZona =listaLocal[i].getElementsByTagName("idTipo")[0].firstChild.nodeValue;
@@ -123,9 +136,103 @@ function showLocalesAside(e){
                     a.href = "local.html?n="+nombre;
                     li.appendChild(a);
                     ulActual.appendChild(li);
+                    if(idSeleccion==idZona){
+                        listaLocales.push(listaLocal[i]);
+                    }
                 }
             }
         }
+    }
+    cargarTop3();
+}
+
+function cargarTop3(){
+    if(listaLocales.length>0){
+        div = document.createElement('div');
+        div.className = "top3Local";
+
+        h3 = document.createElement('h3');
+        h3.className = "nombreLocalT3";
+        h3.innerHTML = listaLocales[0].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+
+        fig = document.createElement('figure');
+        fig.className = "figLocalT3";
+        img = document.createElement('img');
+        img.src="imagen/"+listaLocales[0].getElementsByTagName("nombre")[0].firstChild.nodeValue+"-principal.png";
+        img.alt=listaLocales[0].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        img.width = 100;
+        img.height = 100;
+        //figcap = document.createElement('figcaption');
+        //figcap.innerHTML=listaLocales[0].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        fig.appendChild(img);
+
+        p = document.createElement('p');
+        p.className = "pLocalT3";
+        p.innerHTML = listaLocales[0].getElementsByTagName("resena")[0].firstChild.nodeValue;
+
+        div.appendChild(h3);
+        div.appendChild(fig);
+        div.appendChild(p);
+
+        contenidoTop3.appendChild(div);
+    }
+    if (listaLocales.length > 1) {
+        div = document.createElement('div');
+        div.className = "top3Local";
+
+        h3 = document.createElement('h3');
+        h3.className = "nombreLocalT3";
+        h3.innerHTML = listaLocales[1].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+
+        fig = document.createElement('figure');
+        fig.className = "figLocalT3";
+        img = document.createElement('img');
+        img.src="imagen/"+listaLocales[1].getElementsByTagName("nombre")[0].firstChild.nodeValue+"-principal.png";
+        img.alt=listaLocales[1].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        img.width = 100;
+        img.height = 100;
+        //figcap = document.createElement('figcaption');
+        //figcap.innerHTML=listaLocales[0].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        fig.appendChild(img);
+
+        p = document.createElement('p');
+        p.className = "pLocalT3";
+        p.innerHTML = listaLocales[1].getElementsByTagName("resena")[0].firstChild.nodeValue;
+
+        div.appendChild(h3);
+        div.appendChild(fig);
+        div.appendChild(p);
+
+        contenidoTop3.appendChild(div);
+    }
+    if (listaLocales.length > 2) {
+        div = document.createElement('div');
+        div.className = "top3Local";
+
+        h3 = document.createElement('h3');
+        h3.className = "nombreLocalT3";
+        h3.innerHTML = listaLocales[2].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+
+        fig = document.createElement('figure');
+        fig.className = "figLocalT3";
+        img = document.createElement('img');
+        img.src="imagen/"+listaLocales[2].getElementsByTagName("nombre")[0].firstChild.nodeValue+"-principal.png";
+        img.alt=listaLocales[2].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        img.width = 100;
+        img.height = 100;
+        //figcap = document.createElement('figcaption');
+        //figcap.innerHTML=listaLocales[2].getElementsByTagName("nombre")[0].firstChild.nodeValue;
+        fig.appendChild(img);
+
+        p = document.createElement('p');
+        p.className = "pLocalT3";
+        p.innerHTML = listaLocales[2].getElementsByTagName("resena")[0].firstChild.nodeValue;
+
+        div.appendChild(h3);
+        div.appendChild(fig);
+        div.appendChild(p);
+
+        contenidoTop3.appendChild(div);
     }
 }
 
