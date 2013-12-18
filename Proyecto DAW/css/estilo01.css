@@ -230,6 +230,9 @@ footer
     text-transform: none;
 }
 
+.fb-comments{
+	margin-left: 300px;
+}
 
 
 *:first-child+html #menu ul a{ /* IE7 */    
