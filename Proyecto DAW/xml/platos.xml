@@ -1,61 +1,68 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <platos>
 	<plato>
-		<id_plato>0001</id_plato>
+		<id>0001</id>
 		<nombre>Arroz con menestra</nombre>
 		<descripcion> Este plato incluye el arroz con menestra su acompanate puede ser
 						carne, pollo o chancho. Incluye ensalada y papas</descripcion>
 		<foto>	../images/platos/img_1	</foto>
 		<puntuacion> 4 </puntuacion>
+        <idLocal>0001</idLocal>
 	</plato>
 	<plato>
-		<id_plato>0002</id_plato>
+		<id>0002</id>
 		<nombre>Lasagna de Carne</nombre>
 		<descripcion>Una rica y apetitosa lasagna con carne, champinones 
 						queso gratinado por encima.
 						Un plato realmente delicioso</descripcion>
 		<foto>	../images/platos/img_2	</foto>
 		<puntuacion> 4 </puntuacion>
+        <idLocal>0001</idLocal>
 	</plato>
 
 	<plato>
-		<id_plato>0003</id_plato>
+		<id>0003</id>
 		<nombre>Seco de pollo</nombre>
 		<descripcion> El seco de pollo lo podras degustar con una porcion de maduro. Delicioso!</descripcion>
 		<foto>	../images/platos/img_3	</foto>
 		<puntuacion> 4 </puntuacion>
+        <idLocal>0003</idLocal>
 	</plato>
 
 	<plato>
-		<id_plato>0004</id_plato>
+		<id>0004</id>
 		<nombre>Sopa Marinera </nombre>
 		<descripcion> Sopa con una variedad de marisco entre ellos: pescado, calamar, camaron y concha. Se presenta
 						con rodajas de aguacate</descripcion>
 		<foto>	../images/platos/img_4	</foto>
 		<puntuacion> 4 </puntuacion>
+        <idLocal>0003</idLocal>
 	</plato>
 
 	<plato>
-		<id_plato>0005</id_plato>
+		<id>0005</id>
 		<nombre>Arroz Vegetariano</nombre>
 		<descripcion> Arroz con una variedad de vegetales entre ellos: tomate, cilantro, zanahoria y cebolla. 
 						Aprenda a comer sano.</descripcion>
 		<foto>	../images/platos/img_1	</foto>
 		<puntuacion> 4 </puntuacion>
+        <idLocal>0003</idLocal>
 	</plato>
 	<plato>
-		<id_plato>0006</id_plato>
+		<id>0006</id>
 		<nombre>Encebollado</nombre>
 		<descripcion>El encebollado, un palto tipo se puede degustar con arroz, chifle o pan.
 					Vale la pena probarlo</descripcion>
 		<foto>	../images/platos/img_1	</foto>
 		<puntuacion> 4 </puntuacion>
+        <idLocal>0003</idLocal>
 	</plato>	
 	<plato>
-		<id_plato>0007</id_plato>
+		<id>0007</id>
 		<nombre>Tortilla de Verde</nombre>
 		<descripcion>Tortilla de verde con extra queso. Riquisimo!</descripcion>
 		<foto>	../images/platos/img_1	</foto>
 		<puntuacion> 4 </puntuacion>
+        <idLocal>0003</idLocal>
 	</plato>	
 </platos>
