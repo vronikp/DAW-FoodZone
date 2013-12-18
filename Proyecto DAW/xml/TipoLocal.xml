@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <tiposLocal>
     <tipoLocal>
-        <id>001</id>
+        <id>1</id>
         <nombre>Bar</nombre>
     </tipoLocal>
     <tipoLocal>
-        <id>002</id>
+        <id>2</id>
         <nombre>Comedor</nombre>
     </tipoLocal>
     <tipoLocal>
-        <id>003</id>
+        <id>3</id>
         <nombre>Quiosco</nombre>
     </tipoLocal>
 </tiposLocal>
