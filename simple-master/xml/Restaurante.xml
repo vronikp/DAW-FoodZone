@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<restaurantes>
+    <restaurante>
+        <id>1</id>
+        <nombre>Comedor FIEC</nombre>
+        <direccion>FIEC nueva</direccion>
+        <resena>El local 1 se encuentra estratégicamente ubicado en la conocida FIEC "nueva". 
+				La variedad de comida que ofrece es de la mejor calidad, por lo que es preferida 
+				por los estudiantes de todas las facultades</resena>
+		<idZona>1</idZona>
+		<idTipo>2</idTipo>
+		<puntuacion> 4 </puntuacion>
+        <fechaIngreso>2013-11-21 11:00:00</fechaIngreso>
+        <idUsuarioIngreso>0001</idUsuarioIngreso>
+		<latitud> -2.144947</latitud>
+		<longitud> -79.96617</longitud>
+        <activo>true</activo>
+    </restaurante>
+    <restaurante>
+        <id>2</id>
+        <nombre>Pasteles El Chino</nombre>
+        <direccion>Frente de la plazoleta de la FIEC Nueva</direccion>
+        <resena>Ofrece diferentes pastelitos que sin duda querrás volver a comer!</resena>
+		<idZona>2</idZona>
+		<idTipo>3</idTipo>
+		<puntuacion> 4 </puntuacion>
+        <fechaIngreso>2013-10-23 08:30:00</fechaIngreso>
+        <usuarioIngreso>0002</usuarioIngreso>
+		<latitud> -2.144901</latitud>
+		<longitud> -79.965698</longitud>
+        <activo>true</activo>
+    </restaurante>
+    <restaurante>
+        <id>3</id>
+        <nombre>ComoiMeVoi</nombre>
+        <direccion>Plazoleta de Mecánica</direccion>
+		<resena>Vendemos colas, juegos, tortillas, muchines, bollos. Atención todo el día</resena>
+        <idZona>3</idZona>
+        <idTipo>1</idTipo>
+        <puntuacion> 4 </puntuacion>
+        <fechaIngreso>2013-08-20 09:57:00</fechaIngreso>
+        <usuarioIngreso>0003</usuarioIngreso>
+		<latitud> -2.144853</latitud>
+		<longitud> -79.966135</longitud>
+        <activo>true</activo>
+    </restaurante>
+	<restaurante>
+        <id>4</id>
+        <nombre>D Elizabeth</nombre>
+        <direccion>Piscina de Tecnologias</direccion>
+		<resena>Venta de colas, tortillas y demás alimentos nutricionales</resena>
+        <idZona>6</idZona>
+        <idTipo>1</idTipo>
+        <puntuacion> 4 </puntuacion>
+        <fechaIngreso>2013-09-23 09:57:00</fechaIngreso>
+        <usuarioIngreso>0004</usuarioIngreso>
+		<latitud> -2.151929</latitud>
+		<longitud> -79.958014</longitud>
+        <activo>true</activo>
+    </restaurante>
+	<restaurante>
+        <id>5</id>
+        <nombre>Bar 3</nombre>
+        <direccion>Patio de Comidas ICM Local # 3</direccion>
+		<resena>Venta de pasteles, tostadas, cafe con leche, colas, agua</resena>
+        <idZona>2</idZona>
+        <idTipo>1</idTipo>
+        <puntuacion> 4 </puntuacion>
+        <fechaIngreso>2010-10-10 08:36:00</fechaIngreso>
+        <usuarioIngreso>0005</usuarioIngreso>
+		<latitud> -2.145973</latitud>
+		<longitud> -79.966898</longitud>
+        <activo>true</activo>
+    </restaurante>
+	<restaurante>
+        <id>6</id>
+        <nombre>Neo</nombre>
+        <direccion>Patio de Comidas ICM Local # 4</direccion>
+		<resena>Venta de salchipapas, patacones, patacones con pollo</resena>
+        <idZona>2</idZona>
+        <idTipo>1</idTipo>
+        <puntuacion> 4 </puntuacion>
+        <fechaIngreso>2011-10-19 09:15:00</fechaIngreso>
+        <usuarioIngreso>0006</usuarioIngreso>
+		<latitud> -2.145973</latitud>
+		<longitud> -79.966898</longitud>
+        <activo>true</activo>
+    </restaurante>
+	<restaurante>
+        <id>7</id>
+        <nombre>Bar Principal de Mecánica</nombre>
+        <direccion>Patio de Comidas FIMCP Local #2</direccion>
+		<resena>Venta de empanadas, cafe con leche, colas, agua</resena>
+        <idZona>5</idZona>
+        <idTipo>1</idTipo>
+        <puntuacion> 4 </puntuacion>
+        <fechaIngreso>2010-10-22 07:16:00</fechaIngreso>
+        <usuarioIngreso>0007</usuarioIngreso>
+		<latitud> -2.144896</latitud>
+		<longitud> -79.96636</longitud>
+        <activo>true</activo>
+    </restaurante>
+	<restaurante>
+        <id>8</id>
+        <nombre>Restaurante la Delicia</nombre>
+        <direccion>Edificio # 7 Área de Ingeniería</direccion>
+		<resena>Venta de almuerzos</resena>
+        <idZona>5</idZona>
+        <idTipo>2</idTipo>
+        <puntuacion> 4 </puntuacion>
+        <fechaIngreso>2010-11-17 08:23:00</fechaIngreso>
+        <usuarioIngreso>0008</usuarioIngreso>
+		<latitud> -2.146349</latitud>
+		<longitud> -79.964647</longitud>
+        <activo>true</activo>
+    </restaurante>
+	<restaurante>
+        <id>9</id>
+        <nombre>La carreta de Tonio</nombre>
+        <direccion>Patio de comidas FEN</direccion>
+		<resena>Venta de tacos, hamburguesas, hot dogs. Todo lo que desees.</resena>
+        <idZona>2</idZona>
+        <idTipo>1</idTipo>
+        <puntuacion> 4 </puntuacion>
+        <fechaIngreso>2011-07-22 09:02:00</fechaIngreso>
+        <usuarioIngreso>0009</usuarioIngreso>
+		<latitud> -2.147501</latitud>
+		<longitud> -79.967203</longitud>
+        <activo>true</activo>
+    </restaurante>
+	<restaurante>
+        <id>10</id>
+        <nombre>Frutanga Don German</nombre>
+        <direccion>Patio de Comidas ICM Local #2</direccion>
+		<resena>Venta de tostadas, batidos, bolones.</resena>
+        <idZona>2</idZona>
+        <idTipo>1</idTipo>
+        <puntuacion> 4 </puntuacion>
+        <fechaIngreso>2010-10-22 08:30:00</fechaIngreso>
+        <usuarioIngreso>0010</usuarioIngreso>
+		<latitud> -2.145973</latitud>
+		<longitud> -79.966898</longitud>
+        <activo>true</activo>
+    </restaurante>
+	<restaurante>
+        <id>11</id>
+        <nombre>Bar de Magali</nombre>
+        <direccion>Facultad F.I.C.T.</direccion>
+		<resena>Venta de tostadas, batidos, bolones, bollos, submarinos.</resena>
+        <idZona>2</idZona>
+        <idTipo>1</idTipo>
+        <puntuacion> 4 </puntuacion>
+        <fechaIngreso>2011-12-22 08:30:00</fechaIngreso>
+        <usuarioIngreso>0011</usuarioIngreso>
+		<latitud> -2.145534</latitud>
+		<longitud> -79.965419</longitud>
+        <activo>true</activo>
+    </restaurante>
+	<restaurante>
+        <id>12</id>
+        <nombre>FRUTTY</nombre>
+        <direccion>Patio de comidas FEN</direccion>
+		<resena>Venta de tostadas, salchipapas, jugos, colas, agua.</resena>
+        <idZona>2</idZona>
+        <idTipo>1</idTipo>
+        <puntuacion> 4 </puntuacion>
+        <fechaIngreso>2011-07-22 07:12:00</fechaIngreso>
+        <usuarioIngreso>0012</usuarioIngreso>
+		<latitud> -2.147501</latitud>
+		<longitud> -79.967203</longitud>
+        <activo>true</activo>
+    </restaurante>
+</restaurantes>

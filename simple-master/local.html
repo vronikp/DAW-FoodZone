@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Food zone-Locales</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="CSS/estilo01.css" />
+        <link rel="stylesheet" href="CSS/estiloLocal.css" />
+        <script src="js/scriptNavigation.js"></script>
+        <script src="js/local.js"></script>
+        <link rel="icon" href="imagen/logo-3.jpg" />
+    </head>
+    <body>
+        <header>
+            <figure id="logo">
+                <img src="imagen/logo.jpg" alt="Logo Llevame a comer!" width="422" height="200"/>
+            </figure>
+            <div id="slogan">
+			    <h2 id="sloganTexto">
+				    Encuentra donde comer lo que quieres comer!
+			    </h2>
+            </div>
+		</header>
+		
+		<nav>
+			<ul  id="menu">
+			    <li><a class="general" href="index.html">Inicio</a></li>
+                <li><a class="general" href="#">Tipo Local</a>
+                    <ul id="listaLocalTipo">
+                    </ul>
+                </li>
+                <li><a class="general" href="#">Locales por Zona</a>
+                    <ul id="listaLocalZona">
+                    </ul>
+                </li>
+                <li><a class="admin" href="#">Administrar Usuarios</a></li>
+                <li><a class="adminLocal" href="#">Administrar Local</a></li>
+                <li><a class="usuario" href="#">Favoritos</a></li>
+                <li><a class="usuario" href="#">Quiero Comer YA!</a></li>
+                <li class="redesSociales"><a href="#" class="general" id="InicioSesion">Iniciar sesi&oacute;n</a></li>
+                <li class="redesSociales"><a href="#" class="general" id="cierroSesion" style="display: none">Cerrar sesi&oacute;n</a></li>
+                <li class="redesSociales"><a href="http://twitter.com/#!/FoodZoneEc" class="social-tw textindent">Twitter</a></li>
+                <li class="redesSociales"><a href="http://facebook.com/FoodZoneEc" class="social-fb textindent">FB</a></li>
+
+
+            </ul>
+		</nav>
+		
+        <!--Login div emergente-->
+        <div class="loginform" id="divLogin">
+            <form action="/ideas?destination=ideas" accept-charset="UTF-8" method="post" id="user-login-form">
+                <div>
+                    <div class="login-error"></div>
+                    <div class="form-item" id="edit-name-wrapper">
+                        <label for="edit-name">Usuario: <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" class="form-text required error">
+                    </div>
+                    <div class="form-item" id="edit-pass-wrapper">
+                        <label for="edit-pass">Contraseña: <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="password" name="pass" id="edit-pass" maxlength="60" size="15" class="form-text required error">
+                    </div>
+                    <input type="submit" name="op" id="btnIniciarSesion" value="Iniciar Sesion" class="form-submit">
+                    <div class="item-list">
+                        <ul>
+                            <li><a href="/usuario/registro.html" title="Create a new user account." class="gi-user-register">Registrarse</a></li>
+                            <li class="last"><a href="/usuario/contrasena.html" title="Request new password via e-mail.">Olvid&oacute; su clave</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+		<aside id="asideIzq">
+            <ul id="listaTipoZona">
+            </ul>
+        </aside>
+            
+        <section id = "contenido">
+            <h1 id="nombreLocal"></h1>
+            <div id="top3">
+                <h2>Top 3</h2>
+                <div id="contenidoTop3">
+                    
+                </div>
+            </div>
+            <h2>Reseña</h2>
+            <p id="resena"></p>
+            <h2>Horario de atencion</h2>
+            <p id="horarioAtencion"></p>
+            <h2>Lista de platos</h2>
+            <ul id="ulPlatos">
+
+            </ul>
+
+		</section>
+
+        <section id="plato">
+            <div>
+                <h1 id="nombrePlato"></h1>
+                <figure id="figPlato">
+                    <img id="imgPlato" src="" alt="" />
+                </figure>
+                <p id="descripcionPlato"></p>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,214 @@
+﻿body
+{
+    font-family: Andalus;
+}
+
+
+#slogan
+{
+    display: table-cell;
+	vertical-align: middle;
+    height:200px;
+}
+
+#sloganTexto
+    {
+        margin: 10px 30px auto;
+    }
+
+.srt-menu .admin
+{
+    display:none;
+}
+
+.srt-menu .adminLocal{
+    display:none;
+}
+
+.srt-menu .usuario{
+    display:none;
+}
+
+
+#infoWindow{
+	width:300px;
+	height:200px;
+	text-align: left;
+	margin-left:15px;
+	background: #f1da36; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #f1da36 29%, #fefcea 90%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(29%,#f1da36), color-stop(90%,#fefcea)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #f1da36 29%,#fefcea 90%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #f1da36 29%,#fefcea 90%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #f1da36 29%,#fefcea 90%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #f1da36 29%,#fefcea 90%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1da36', endColorstr='#fefcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+}
+
+
+/*LOGIN en nav*/
+#user-login-form {
+  text-align: center;
+}
+#user-login-form ul {
+  text-align: left; /* LTR */
+  width: 180px;
+  padding: 0;
+  margin: 0 0 0.75em 0;
+}
+
+.login-error{
+color:red;
+font-size:13px;
+left:104px;
+position:absolute;
+text-align:right;
+top:10px;
+*top:12px;
+_top:12px;
+_left:97px;
+_width:186px;
+}
+
+/* Login popup */  
+  
+a.login, a.logout{
+display: block;
+float: right;
+font-family:"Trebuchet MS",Arial;
+font-size:13px;
+text-decoration:none;
+padding: 6px 12px 6px 12px;
+font-weight: bold;
+color: #266b5d;
+font-variant: small-caps;
+/*border:1px solid #bcd9cf;
+border-top: none;
+background: #dfeee9;
+-moz-border-radius-bottomleft: 4px;
+-moz-border-radius-bottomright: 4px;
+-webkit-border-bottom-right-radius:4px;
+-webkit-border-bottom-left-radius:4px;*/
+}
+
+a.login:hover, a.logout:hover{
+/* background: #cae3db; */
+color: #1d2920;
+}
+
+.loginform{
+position: absolute;
+border-top: 1px solid rgba(255,255,255,.2);
+background: #333;
+background: rgba(0,0,0,.6);
+}
+
+
+.loginform form{
+padding:23px;
+overflow: hidden;
+position:relative;
+*padding-top:33px;
+*padding-bottom:28px;
+*overflow: inherit;
+_padding-top:30px;
+_height:1%;
+}
+
+
+
+.loginform span.form-required{
+display: none;
+}
+
+.loginform .item-list ul{
+float: left;
+}
+
+.loginform .item-list{
+padding-top: 7px;
+overflow: hidden;
+_padding-top:15px;
+}
+
+.loginform .item-list li a{
+font-size: 14px;
+_letter-spacing:-1px;
+float:left;
+display: block;
+}
+
+.loginform .item-list li a.gi-user-register{
+padding-right: 8px;
+color: #d56206;
+}
+
+.loginform .item-list ul li{
+float: left;
+padding: 0px;
+margin: 0px;
+list-style-type: none;
+list-style-image: none;
+display: list-item;
+text-align: -webkit-match-parent;
+}
+
+.loginform .form-item{
+overflow: hidden;
+margin: 8px 0px;
+clear: both;
+_padding:4px 0px;
+_margin:0px;
+}
+
+.loginform .form-item label{
+float: left;
+color: #5c7a72;
+font-size: 13px;
+padding-top: 6px;
+}
+
+.loginform .form-item input.form-text{
+border-width: 1px;
+background: #eff7f9;
+float: right;
+width:156px;
+}
+
+.loginform .form-item input.form-text:hover, .loginform .form-item input.form-text:focus{
+background: #FFF;
+}
+
+.loginform .form-submit{
+padding: 3px 4px;
+float: right;
+font-variant: small-caps;
+font-family: Arial, "Trebuchet MS", Helvetica;
+color: #e5eae9;
+border: none;
+/*width:72px;*/
+height: 27px;
+_position:absolute;
+_right:22px;
+_top:106px;
+background: linear-gradient(#444, #111);
+-moz-border-radius: 5px;
+border-radius: 5px;
+-moz-box-shadow: 0 2px 1px #9c9c9c;
+-webkit-box-shadow: 0 2px 1px #9c9c9c;
+box-shadow: 0 2px 1px #9c9c9c;
+}
+
+/*.loginform .form-submit:hover{
+color: #FFF;
+background:url(images/login_btn_o.gif);
+}*/
+
+
+footer {
+    clear:both;
+    width: 100%;
+    bottom: 0;       
+}

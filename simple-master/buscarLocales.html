@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es-ec">
+	<head>
+        <title>Food zone</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="CSS/estilo01.css" />
+		<link rel="stylesheet" href="CSS/estiloIndex.css" />
+		<script 
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn1VT66c9YP05wsQ05_rEv6z6mqi04r2o&sensor=true">
+		</script>
+		<script src = "js/locales.js"> </script>
+        <link rel="icon" href="imagen/logo-3.jpg" />
+	</head>
+
+	<body>
+		<header>
+            <figure id="logo">
+                <img src="imagen/logo.jpg" alt="Logo Llevame a comer!" width="422" height="200"/>
+            </figure>
+            <div id="slogan">
+			    <h2 id="sloganTexto">
+				    Encuentra donde comer lo que quieres comer!
+			    </h2>
+            </div>
+		</header>
+		
+		<nav>
+			<ul  id="menu">
+			    <li><a class="general" href="#">Inicio</a></li>
+                <li><a class="general" href="#">Tipo Local</a>
+                    <ul id="listaLocalTipo">
+                    </ul>
+                </li>
+                <li><a class="general" href="#">Locales por Zona</a>
+                    <ul id="listaLocalZona">
+                    </ul>
+                </li>
+                <li><a class="admin" href="#">Administrar Usuarios</a></li>
+                <li><a class="adminLocal" href="#">Administrar Local</a></li>
+                <li><a class="usuario" href="#">Favoritos</a></li>
+                <li><a class="usuario" href="#">Quiero Comer YA!</a></li>
+                <li class="redesSociales"><a href="#" class="general" id="InicioSesion">Iniciar sesi&oacute;n</a></li>
+                <li class="redesSociales"><a href="#" class="general" id="cierroSesion" style="display: none">Cerrar sesi&oacute;n</a></li>
+                <li class="redesSociales"><a href="http://twitter.com/#!/FoodZoneEc" class="social-tw textindent">Twitter</a></li>
+                <li class="redesSociales"><a href="http://facebook.com/FoodZoneEc" class="social-fb textindent">FB</a></li>
+
+
+            </ul>
+		</nav>
+		
+        <!--Login div emergente-->
+        <div class="loginform" id="divLogin">
+            <form action="/ideas?destination=ideas" accept-charset="UTF-8" method="post" id="user-login-form">
+                <div>
+                    <div class="login-error"></div>
+                    <div class="form-item" id="edit-name-wrapper">
+                        <label for="edit-name">Usuario: <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" class="form-text required error">
+                    </div>
+                    <div class="form-item" id="edit-pass-wrapper">
+                        <label for="edit-pass">Contraseña: <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="password" name="pass" id="edit-pass" maxlength="60" size="15" class="form-text required error">
+                    </div>
+                    <input type="submit" name="op" id="edit-submit-1" value="Iniciar Sesion" class="form-submit">
+                    <div class="item-list">
+                        <ul>
+                            <li><a href="/usuario/registro.html" title="Create a new user account." class="gi-user-register">Registrarse</a></li>
+                            <li class="last"><a href="/usuario/contrasena.html" title="Request new password via e-mail.">Olvid&oacute; su clave</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+		<aside id="asideIzq">
+            <form id="frmBusqueda" name="frm" action="/searchresults.html" method="get">
+                <h3 class="tituloBusqueda">
+                    <img class="search-box-title-icon" width="24" height="23" alt="" src="http://q-ec.bstatic.com/static/img/affiliate_base/sb_border_gradient/13cf80cf601748203235e25e69935667e09d112a.png"></img>
+                    Buscar locales
+                </h3>
+                <div class="contenedorOpcionBusqueda">
+                <label class="labelBusqueda">Ubicaci&oacute;n/Zona:</label> 
+                <select id="selectZona">
+	            </select>
+                </div>
+                <div class="contenedorOpcionBusqueda">
+                <label class="labelBusqueda">Tipo de Local</label>
+                <select id="selectTipo">
+	            </select>
+                </div>
+                <div class="contenedorOpcionBusqueda">
+                <label class="labelBusqueda">Fecha desde:</label>
+                <input id="dateDesde" class="inputDate" type="date" required/>
+                </div>
+                <div class="contenedorOpcionBusqueda">
+                <label class="labelBusqueda">Fecha hasta</label>
+                <input id="dateHasta" class="inputDate" type="date" required/>
+                </div>
+                <div class="contenedorOpcionBusqueda">
+                <input id="btnBuscar" type="button" value="Buscar" onclick = "build()" />
+                </div>
+            </form>
+
+		</aside>
+
+	
+        <section id = "contenido">
+
+		</section>
+        
+        <div style="clear: both"></div> 
+
+		<footer>
+			Proyecto de Desarrollo de Aplicaciones Web <br>
+			Desarrollado por: 
+			<ul>
+				<li> Iv&aacute;n Aveiga</li>
+				<li> Diana Panchana</li>
+				<li> Ver&oacute;nica Pozo</li>
+				<li> Marcelo S&aacute;nchez</li>
+			</ul>
+			
+			Todos los derechos reservados &copy;
+			
+			2013 - 2014
+		</footer>
+		
+	</body>
+</html>
