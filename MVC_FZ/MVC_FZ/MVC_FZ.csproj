@@ -108,6 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\IndexControl.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -117,7 +118,50 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="CSS\basic-style.css" />
+    <Content Include="CSS\estilo01.css" />
+    <Content Include="CSS\EstiloIndex.css" />
+    <Content Include="CSS\normalize.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\basic-logo.png" />
+    <Content Include="Images\basic-pic1.jpg" />
+    <Content Include="Images\basic-pic2.jpg" />
+    <Content Include="Images\basic-pic3.jpg" />
+    <Content Include="Images\basic-pic4.jpg" />
+    <Content Include="Images\colorblocks-ico1.png" />
+    <Content Include="Images\colorblocks-ico2.png" />
+    <Content Include="Images\colorblocks-ico3.png" />
+    <Content Include="Images\colorblocks-ico4.png" />
+    <Content Include="Images\colorblocks-ico5.png" />
+    <Content Include="Images\colorblocks-ico6.png" />
+    <Content Include="Images\colorblocks-logo.png" />
+    <Content Include="Images\colorblocks-pic1.jpg" />
+    <Content Include="Images\colorblocks-pic2.jpg" />
+    <Content Include="Images\colorblocks-pic3.jpg" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\loader.gif" />
+    <Content Include="Images\login_pop.png" />
+    <Content Include="Images\login_pop2.png" />
+    <Content Include="Images\login_pop3.png" />
+    <Content Include="Images\logo-2.jpg" />
+    <Content Include="Images\logo-3.jpg" />
+    <Content Include="Images\logo-peque.jpg" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\slideshow\1.jpg" />
+    <Content Include="Images\slideshow\2.jpg" />
+    <Content Include="Images\slideshow\3.jpg" />
+    <Content Include="Images\slideshow\4.jpg" />
+    <Content Include="Images\slideshow\5.jpg" />
+    <Content Include="Images\social-sprite-fb.png" />
+    <Content Include="Images\social-sprite-gp.png" />
+    <Content Include="Images\social-sprite-tw.png" />
+    <Content Include="Images\social-sprite.png" />
+    <Content Include="JS\libs\jquery-1.9.0.min.js" />
+    <Content Include="JS\libs\modernizr-2.6.2.min.js" />
+    <Content Include="JS\locales.js" />
+    <Content Include="JS\ScriptNavigation.js" />
+    <Content Include="Views\Index.aspx" />
+    <Content Include="Views\Mapa.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -129,11 +173,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\basic-logo.svg" />
+    <Content Include="Images\colorblocks-ico1.svg" />
+    <Content Include="Images\colorblocks-ico2.svg" />
+    <Content Include="Images\colorblocks-ico3.svg" />
+    <Content Include="Images\colorblocks-ico4.svg" />
+    <Content Include="Images\colorblocks-ico5.svg" />
+    <Content Include="Images\colorblocks-ico6.svg" />
+    <Content Include="Images\colorblocks-logo.svg" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
