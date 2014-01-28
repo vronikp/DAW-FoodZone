@@ -1,0 +1,69 @@
+﻿@model IEnumerable<FoodZone.Models.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuari_NombreCompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuari_Clave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuari_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuari_FechaIngreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuari_Activo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoUsuario.TipoUsuario_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario2.Usuari_NombreCompleto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuari_NombreCompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuari_Clave)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuari_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuari_FechaIngreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuari_Activo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoUsuario.TipoUsuario_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario2.Usuari_NombreCompleto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Usuari_Codigo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Usuari_Codigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Usuari_Codigo })
+        </td>
+    </tr>
+}
+
+</table>

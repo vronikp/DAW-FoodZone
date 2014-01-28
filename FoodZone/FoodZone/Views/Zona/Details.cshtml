@@ -1,0 +1,50 @@
+﻿@model FoodZone.Models.Zona
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Zona</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Zona_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zona_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zona_Longitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zona_Longitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zona_Latitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zona_Latitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zona_Acitvo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zona_Acitvo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Zona_Codigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

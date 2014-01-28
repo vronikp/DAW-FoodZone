@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FoodZoneModelStoreContainer" CdmEntityContainer="FoodZoneEntities">
+    <EntitySetMapping Name="Horarios">
+      <EntityTypeMapping TypeName="FoodZoneModel.Horario">
+        <MappingFragment StoreEntitySet="Horario">
+          <ScalarProperty Name="Horari_Codigo" ColumnName="Horari_Codigo" />
+          <ScalarProperty Name="Horari_Fecha" ColumnName="Horari_Fecha" />
+          <ScalarProperty Name="Horari_HoraDesde" ColumnName="Horari_HoraDesde" />
+          <ScalarProperty Name="Horari_HoraHasta" ColumnName="Horari_HoraHasta" />
+          <ScalarProperty Name="Horari_Grupo" ColumnName="Horari_Grupo" />
+          <ScalarProperty Name="Local_Codigo" ColumnName="Local_Codigo" />
+          <ScalarProperty Name="Usuari_Codigo" ColumnName="Usuari_Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HorarioPlatoes">
+      <EntityTypeMapping TypeName="FoodZoneModel.HorarioPlato">
+        <MappingFragment StoreEntitySet="HorarioPlato">
+          <ScalarProperty Name="Horari_Codigo" ColumnName="Horari_Codigo" />
+          <ScalarProperty Name="Plato_Codigo" ColumnName="Plato_Codigo" />
+          <ScalarProperty Name="HorPla_Activo" ColumnName="HorPla_Activo" />
+          <ScalarProperty Name="Usuari_Codigo" ColumnName="Usuari_Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locals">
+      <EntityTypeMapping TypeName="FoodZoneModel.Local">
+        <MappingFragment StoreEntitySet="Local">
+          <ScalarProperty Name="Local_Codigo" ColumnName="Local_Codigo" />
+          <ScalarProperty Name="Local_Nombre" ColumnName="Local_Nombre" />
+          <ScalarProperty Name="Local_Direccion" ColumnName="Local_Direccion" />
+          <ScalarProperty Name="Local_Resena" ColumnName="Local_Resena" />
+          <ScalarProperty Name="Local_Latitud" ColumnName="Local_Latitud" />
+          <ScalarProperty Name="Local_Longitud" ColumnName="Local_Longitud" />
+          <ScalarProperty Name="Local_Activo" ColumnName="Local_Activo" />
+          <ScalarProperty Name="Local_ManoArriba" ColumnName="Local_ManoArriba" />
+          <ScalarProperty Name="Local_ManoAbajo" ColumnName="Local_ManoAbajo" />
+          <ScalarProperty Name="Local_Foto" ColumnName="Local_Foto" />
+          <ScalarProperty Name="Local_FechaIngreso" ColumnName="Local_FechaIngreso" />
+          <ScalarProperty Name="Usuari_Codigo" ColumnName="Usuari_Codigo" />
+          <ScalarProperty Name="TipoLocal_Codigo" ColumnName="TipoLocal_Codigo" />
+          <ScalarProperty Name="Zona_Codigo" ColumnName="Zona_Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Platoes">
+      <EntityTypeMapping TypeName="FoodZoneModel.Plato">
+        <MappingFragment StoreEntitySet="Plato">
+          <ScalarProperty Name="Plato_Codigo" ColumnName="Plato_Codigo" />
+          <ScalarProperty Name="Plato_Nombre" ColumnName="Plato_Nombre" />
+          <ScalarProperty Name="Plato_Descripcion" ColumnName="Plato_Descripcion" />
+          <ScalarProperty Name="Plato_ManoArriba" ColumnName="Plato_ManoArriba" />
+          <ScalarProperty Name="Plato_ManoAbajo" ColumnName="Plato_ManoAbajo" />
+          <ScalarProperty Name="Plato_Foto" ColumnName="Plato_Foto" />
+          <ScalarProperty Name="Local_Codigo" ColumnName="Local_Codigo" />
+          <ScalarProperty Name="Plato_FechaIngreso" ColumnName="Plato_FechaIngreso" />
+          <ScalarProperty Name="Usuari_Codigo" ColumnName="Usuari_Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoLocals">
+      <EntityTypeMapping TypeName="FoodZoneModel.TipoLocal">
+        <MappingFragment StoreEntitySet="TipoLocal">
+          <ScalarProperty Name="TipoLocal_Codigo" ColumnName="TipoLocal_Codigo" />
+          <ScalarProperty Name="TipoLocal_Descripcion" ColumnName="TipoLocal_Descripcion" />
+          <ScalarProperty Name="TipoLocal_Activo" ColumnName="TipoLocal_Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoUsuarios">
+      <EntityTypeMapping TypeName="FoodZoneModel.TipoUsuario">
+        <MappingFragment StoreEntitySet="TipoUsuario">
+          <ScalarProperty Name="TipoUsuario_Codigo" ColumnName="TipoUsuario_Codigo" />
+          <ScalarProperty Name="TipoUsuario_Descripcion" ColumnName="TipoUsuario_Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="FoodZoneModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Usuari_Codigo" ColumnName="Usuari_Codigo" />
+          <ScalarProperty Name="Usuari_NombreCompleto" ColumnName="Usuari_NombreCompleto" />
+          <ScalarProperty Name="Usuari_Clave" ColumnName="Usuari_Clave" />
+          <ScalarProperty Name="Usuari_Email" ColumnName="Usuari_Email" />
+          <ScalarProperty Name="Usuari_FechaIngreso" ColumnName="Usuari_FechaIngreso" />
+          <ScalarProperty Name="Usuari_UsuarioIngreso" ColumnName="Usuari_UsuarioIngreso" />
+          <ScalarProperty Name="Usuari_Activo" ColumnName="Usuari_Activo" />
+          <ScalarProperty Name="TipoUsuario_Codigo" ColumnName="TipoUsuario_Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zonas">
+      <EntityTypeMapping TypeName="FoodZoneModel.Zona">
+        <MappingFragment StoreEntitySet="Zona">
+          <ScalarProperty Name="Zona_Codigo" ColumnName="Zona_Codigo" />
+          <ScalarProperty Name="Zona_Descripcion" ColumnName="Zona_Descripcion" />
+          <ScalarProperty Name="Zona_Longitud" ColumnName="Zona_Longitud" />
+          <ScalarProperty Name="Zona_Latitud" ColumnName="Zona_Latitud" />
+          <ScalarProperty Name="Zona_Acitvo" ColumnName="Zona_Acitvo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

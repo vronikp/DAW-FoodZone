@@ -1,0 +1,75 @@
+﻿@model IEnumerable<FoodZone.Models.Plato>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Plato_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plato_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plato_ManoArriba)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plato_ManoAbajo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plato_Foto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plato_FechaIngreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local.Local_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.Usuari_NombreCompleto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plato_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plato_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plato_ManoArriba)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plato_ManoAbajo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plato_Foto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plato_FechaIngreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local.Local_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.Usuari_NombreCompleto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Plato_Codigo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Plato_Codigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Plato_Codigo })
+        </td>
+    </tr>
+}
+
+</table>

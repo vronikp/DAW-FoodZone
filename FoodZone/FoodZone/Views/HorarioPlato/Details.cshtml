@@ -1,0 +1,50 @@
+﻿@model FoodZone.Models.HorarioPlato
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HorarioPlato</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HorPla_Activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HorPla_Activo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Horario.Local_Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Horario.Local_Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plato.Plato_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plato.Plato_Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.Usuari_NombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.Usuari_NombreCompleto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

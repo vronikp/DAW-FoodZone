@@ -1,0 +1,138 @@
+﻿@model FoodZone.Models.Local
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Local</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Local_Codigo)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local_Nombre, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Local_Nombre)
+                @Html.ValidationMessageFor(model => model.Local_Nombre)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local_Direccion, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Local_Direccion)
+                @Html.ValidationMessageFor(model => model.Local_Direccion)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local_Resena, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Local_Resena)
+                @Html.ValidationMessageFor(model => model.Local_Resena)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local_Latitud, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Local_Latitud)
+                @Html.ValidationMessageFor(model => model.Local_Latitud)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local_Longitud, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Local_Longitud)
+                @Html.ValidationMessageFor(model => model.Local_Longitud)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local_Activo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Local_Activo)
+                @Html.ValidationMessageFor(model => model.Local_Activo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local_ManoArriba, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Local_ManoArriba)
+                @Html.ValidationMessageFor(model => model.Local_ManoArriba)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local_ManoAbajo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Local_ManoAbajo)
+                @Html.ValidationMessageFor(model => model.Local_ManoAbajo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local_Foto, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Local_Foto)
+                @Html.ValidationMessageFor(model => model.Local_Foto)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local_FechaIngreso, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Local_FechaIngreso)
+                @Html.ValidationMessageFor(model => model.Local_FechaIngreso)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Usuari_Codigo, "Usuari_Codigo", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Usuari_Codigo", String.Empty)
+                @Html.ValidationMessageFor(model => model.Usuari_Codigo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TipoLocal_Codigo, "TipoLocal_Codigo", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("TipoLocal_Codigo", String.Empty)
+                @Html.ValidationMessageFor(model => model.TipoLocal_Codigo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Zona_Codigo, "Zona_Codigo", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Zona_Codigo", String.Empty)
+                @Html.ValidationMessageFor(model => model.Zona_Codigo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

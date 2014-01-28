@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FoodZoneModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Horario">
+    <Key>
+      <PropertyRef Name="Horari_Codigo" />
+    </Key>
+    <Property Name="Horari_Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Horari_Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Horari_HoraDesde" Type="Time" Nullable="false" Precision="4" />
+    <Property Name="Horari_HoraHasta" Type="Time" Nullable="false" Precision="4" />
+    <Property Name="Horari_Grupo" Type="Int32" Nullable="false" />
+    <Property Name="Local_Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Usuari_Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Local" Relationship="Self.FK_Horario_Local" FromRole="Horario" ToRole="Local" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Horario_Usuario" FromRole="Horario" ToRole="Usuario" />
+    <NavigationProperty Name="HorarioPlatoes" Relationship="Self.FK_HorarioPlato_Horario" FromRole="Horario" ToRole="HorarioPlato" />
+  </EntityType>
+  <EntityType Name="HorarioPlato">
+    <Key>
+      <PropertyRef Name="Horari_Codigo" />
+      <PropertyRef Name="Plato_Codigo" />
+    </Key>
+    <Property Name="Horari_Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Plato_Codigo" Type="Int32" Nullable="false" />
+    <Property Name="HorPla_Activo" Type="Boolean" Nullable="false" />
+    <Property Name="Usuari_Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Horario" Relationship="Self.FK_HorarioPlato_Horario" FromRole="HorarioPlato" ToRole="Horario" />
+    <NavigationProperty Name="Plato" Relationship="Self.FK_HorarioPlato_Plato" FromRole="HorarioPlato" ToRole="Plato" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_HorarioPlato_Usuario" FromRole="HorarioPlato" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Local">
+    <Key>
+      <PropertyRef Name="Local_Codigo" />
+    </Key>
+    <Property Name="Local_Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Local_Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Local_Direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Local_Resena" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Local_Latitud" Type="Single" Nullable="false" />
+    <Property Name="Local_Longitud" Type="Single" Nullable="false" />
+    <Property Name="Local_Activo" Type="Boolean" Nullable="false" />
+    <Property Name="Local_ManoArriba" Type="Int32" Nullable="false" />
+    <Property Name="Local_ManoAbajo" Type="Int32" Nullable="false" />
+    <Property Name="Local_Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Local_FechaIngreso" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Usuari_Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoLocal_Codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zona_Codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Horarios" Relationship="Self.FK_Horario_Local" FromRole="Local" ToRole="Horario" />
+    <NavigationProperty Name="TipoLocal" Relationship="Self.FK_Local_TipoLocal" FromRole="Local" ToRole="TipoLocal" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Local_Usuario" FromRole="Local" ToRole="Usuario" />
+    <NavigationProperty Name="Zona" Relationship="Self.FK_Local_Zona" FromRole="Local" ToRole="Zona" />
+    <NavigationProperty Name="Platoes" Relationship="Self.FK_Plato_Local" FromRole="Local" ToRole="Plato" />
+  </EntityType>
+  <EntityType Name="Plato">
+    <Key>
+      <PropertyRef Name="Plato_Codigo" />
+    </Key>
+    <Property Name="Plato_Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Plato_Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Plato_Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Plato_ManoArriba" Type="Int32" />
+    <Property Name="Plato_ManoAbajo" Type="Int32" />
+    <Property Name="Plato_Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Local_Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Plato_FechaIngreso" Type="DateTime" Precision="3" />
+    <Property Name="Usuari_Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HorarioPlatoes" Relationship="Self.FK_HorarioPlato_Plato" FromRole="Plato" ToRole="HorarioPlato" />
+    <NavigationProperty Name="Local" Relationship="Self.FK_Plato_Local" FromRole="Plato" ToRole="Local" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Plato_Usuario" FromRole="Plato" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="TipoLocal">
+    <Key>
+      <PropertyRef Name="TipoLocal_Codigo" />
+    </Key>
+    <Property Name="TipoLocal_Codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoLocal_Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoLocal_Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Locals" Relationship="Self.FK_Local_TipoLocal" FromRole="TipoLocal" ToRole="Local" />
+  </EntityType>
+  <EntityType Name="TipoUsuario">
+    <Key>
+      <PropertyRef Name="TipoUsuario_Codigo" />
+    </Key>
+    <Property Name="TipoUsuario_Codigo" Type="Int32" Nullable="false" />
+    <Property Name="TipoUsuario_Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuario_TipoUsuario" FromRole="TipoUsuario" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Usuari_Codigo" />
+    </Key>
+    <Property Name="Usuari_Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Usuari_NombreCompleto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Usuari_Clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Usuari_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Usuari_FechaIngreso" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Usuari_UsuarioIngreso" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Usuari_Activo" Type="Boolean" Nullable="false" />
+    <Property Name="TipoUsuario_Codigo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Horarios" Relationship="Self.FK_Horario_Usuario" FromRole="Usuario" ToRole="Horario" />
+    <NavigationProperty Name="HorarioPlatoes" Relationship="Self.FK_HorarioPlato_Usuario" FromRole="Usuario" ToRole="HorarioPlato" />
+    <NavigationProperty Name="Locals" Relationship="Self.FK_Local_Usuario" FromRole="Usuario" ToRole="Local" />
+    <NavigationProperty Name="Platoes" Relationship="Self.FK_Plato_Usuario" FromRole="Usuario" ToRole="Plato" />
+    <NavigationProperty Name="TipoUsuario" Relationship="Self.FK_Usuario_TipoUsuario" FromRole="Usuario" ToRole="TipoUsuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Usuario_Usuario" FromRole="Usuario" ToRole="Usuario1" />
+    <NavigationProperty Name="Usuario2" Relationship="Self.FK_Usuario_Usuario" FromRole="Usuario1" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Zona">
+    <Key>
+      <PropertyRef Name="Zona_Codigo" />
+    </Key>
+    <Property Name="Zona_Codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zona_Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zona_Longitud" Type="Single" Nullable="false" />
+    <Property Name="Zona_Latitud" Type="Single" Nullable="false" />
+    <Property Name="Zona_Acitvo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Locals" Relationship="Self.FK_Local_Zona" FromRole="Zona" ToRole="Local" />
+  </EntityType>
+  <Association Name="FK_Horario_Local">
+    <End Role="Local" Type="Self.Local" Multiplicity="1" />
+    <End Role="Horario" Type="Self.Horario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Local">
+        <PropertyRef Name="Local_Codigo" />
+      </Principal>
+      <Dependent Role="Horario">
+        <PropertyRef Name="Local_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Horario_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Horario" Type="Self.Horario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Usuari_Codigo" />
+      </Principal>
+      <Dependent Role="Horario">
+        <PropertyRef Name="Usuari_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HorarioPlato_Horario">
+    <End Role="Horario" Type="Self.Horario" Multiplicity="1" />
+    <End Role="HorarioPlato" Type="Self.HorarioPlato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Horario">
+        <PropertyRef Name="Horari_Codigo" />
+      </Principal>
+      <Dependent Role="HorarioPlato">
+        <PropertyRef Name="Horari_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HorarioPlato_Plato">
+    <End Role="Plato" Type="Self.Plato" Multiplicity="1" />
+    <End Role="HorarioPlato" Type="Self.HorarioPlato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plato">
+        <PropertyRef Name="Plato_Codigo" />
+      </Principal>
+      <Dependent Role="HorarioPlato">
+        <PropertyRef Name="Plato_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HorarioPlato_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="HorarioPlato" Type="Self.HorarioPlato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Usuari_Codigo" />
+      </Principal>
+      <Dependent Role="HorarioPlato">
+        <PropertyRef Name="Usuari_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Local_TipoLocal">
+    <End Role="TipoLocal" Type="Self.TipoLocal" Multiplicity="1" />
+    <End Role="Local" Type="Self.Local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoLocal">
+        <PropertyRef Name="TipoLocal_Codigo" />
+      </Principal>
+      <Dependent Role="Local">
+        <PropertyRef Name="TipoLocal_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Local_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Local" Type="Self.Local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Usuari_Codigo" />
+      </Principal>
+      <Dependent Role="Local">
+        <PropertyRef Name="Usuari_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Local_Zona">
+    <End Role="Zona" Type="Self.Zona" Multiplicity="1" />
+    <End Role="Local" Type="Self.Local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zona">
+        <PropertyRef Name="Zona_Codigo" />
+      </Principal>
+      <Dependent Role="Local">
+        <PropertyRef Name="Zona_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plato_Local">
+    <End Role="Local" Type="Self.Local" Multiplicity="0..1" />
+    <End Role="Plato" Type="Self.Plato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Local">
+        <PropertyRef Name="Local_Codigo" />
+      </Principal>
+      <Dependent Role="Plato">
+        <PropertyRef Name="Local_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plato_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Plato" Type="Self.Plato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Usuari_Codigo" />
+      </Principal>
+      <Dependent Role="Plato">
+        <PropertyRef Name="Usuari_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_TipoUsuario">
+    <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUsuario">
+        <PropertyRef Name="TipoUsuario_Codigo" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="TipoUsuario_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Usuario1" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Usuari_Codigo" />
+      </Principal>
+      <Dependent Role="Usuario1">
+        <PropertyRef Name="Usuari_UsuarioIngreso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FoodZoneEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Horarios" EntityType="Self.Horario" />
+    <EntitySet Name="HorarioPlatoes" EntityType="Self.HorarioPlato" />
+    <EntitySet Name="Locals" EntityType="Self.Local" />
+    <EntitySet Name="Platoes" EntityType="Self.Plato" />
+    <EntitySet Name="TipoLocals" EntityType="Self.TipoLocal" />
+    <EntitySet Name="TipoUsuarios" EntityType="Self.TipoUsuario" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
+    <EntitySet Name="Zonas" EntityType="Self.Zona" />
+    <AssociationSet Name="FK_Horario_Local" Association="Self.FK_Horario_Local">
+      <End Role="Local" EntitySet="Locals" />
+      <End Role="Horario" EntitySet="Horarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Horario_Usuario" Association="Self.FK_Horario_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Horario" EntitySet="Horarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HorarioPlato_Horario" Association="Self.FK_HorarioPlato_Horario">
+      <End Role="Horario" EntitySet="Horarios" />
+      <End Role="HorarioPlato" EntitySet="HorarioPlatoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HorarioPlato_Plato" Association="Self.FK_HorarioPlato_Plato">
+      <End Role="Plato" EntitySet="Platoes" />
+      <End Role="HorarioPlato" EntitySet="HorarioPlatoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HorarioPlato_Usuario" Association="Self.FK_HorarioPlato_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="HorarioPlato" EntitySet="HorarioPlatoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Local_TipoLocal" Association="Self.FK_Local_TipoLocal">
+      <End Role="TipoLocal" EntitySet="TipoLocals" />
+      <End Role="Local" EntitySet="Locals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Local_Usuario" Association="Self.FK_Local_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Local" EntitySet="Locals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Local_Zona" Association="Self.FK_Local_Zona">
+      <End Role="Zona" EntitySet="Zonas" />
+      <End Role="Local" EntitySet="Locals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plato_Local" Association="Self.FK_Plato_Local">
+      <End Role="Local" EntitySet="Locals" />
+      <End Role="Plato" EntitySet="Platoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plato_Usuario" Association="Self.FK_Plato_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Plato" EntitySet="Platoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_TipoUsuario" Association="Self.FK_Usuario_TipoUsuario">
+      <End Role="TipoUsuario" EntitySet="TipoUsuarios" />
+      <End Role="Usuario" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Usuario" Association="Self.FK_Usuario_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Usuario1" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

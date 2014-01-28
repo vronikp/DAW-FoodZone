@@ -1,0 +1,82 @@
+﻿@model FoodZone.Models.Plato
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Plato</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Plato_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plato_Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plato_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plato_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plato_ManoArriba)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plato_ManoArriba)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plato_ManoAbajo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plato_ManoAbajo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plato_Foto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plato_Foto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plato_FechaIngreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plato_FechaIngreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Local.Local_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Local.Local_Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.Usuari_NombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.Usuari_NombreCompleto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Plato_Codigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<FoodZone.Models.Horario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Horari_Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Horari_HoraDesde)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Horari_HoraHasta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Horari_Grupo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local.Local_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.Usuari_NombreCompleto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Horari_Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Horari_HoraDesde)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Horari_HoraHasta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Horari_Grupo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local.Local_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.Usuari_NombreCompleto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Horari_Codigo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Horari_Codigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Horari_Codigo })
+        </td>
+    </tr>
+}
+
+</table>

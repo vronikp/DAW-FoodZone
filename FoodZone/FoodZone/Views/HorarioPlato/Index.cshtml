@@ -1,0 +1,51 @@
+﻿@model IEnumerable<FoodZone.Models.HorarioPlato>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HorPla_Activo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Horario.Local_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plato.Plato_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.Usuari_NombreCompleto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HorPla_Activo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Horario.Local_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plato.Plato_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.Usuari_NombreCompleto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,74 @@
+﻿@model FoodZone.Models.Usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuario</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuari_NombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuari_NombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuari_Clave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuari_Clave)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuari_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuari_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuari_FechaIngreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuari_FechaIngreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuari_Activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuari_Activo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoUsuario.TipoUsuario_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoUsuario.TipoUsuario_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario2.Usuari_NombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario2.Usuari_NombreCompleto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Usuari_Codigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

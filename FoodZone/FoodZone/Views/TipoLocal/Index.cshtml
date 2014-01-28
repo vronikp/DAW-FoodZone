@@ -1,0 +1,39 @@
+﻿@model IEnumerable<FoodZone.Models.TipoLocal>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoLocal_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoLocal_Activo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoLocal_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoLocal_Activo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TipoLocal_Codigo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TipoLocal_Codigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TipoLocal_Codigo })
+        </td>
+    </tr>
+}
+
+</table>

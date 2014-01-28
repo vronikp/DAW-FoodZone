@@ -1,0 +1,105 @@
+﻿@model IEnumerable<FoodZone.Models.Local>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Local_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local_Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local_Resena)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local_Latitud)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local_Longitud)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local_Activo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local_ManoArriba)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local_ManoAbajo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local_Foto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local_FechaIngreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoLocal.TipoLocal_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.Usuari_NombreCompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zona.Zona_Descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local_Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local_Resena)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local_Latitud)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local_Longitud)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local_Activo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local_ManoArriba)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local_ManoAbajo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local_Foto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local_FechaIngreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoLocal.TipoLocal_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.Usuari_NombreCompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zona.Zona_Descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Local_Codigo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Local_Codigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Local_Codigo })
+        </td>
+    </tr>
+}
+
+</table>

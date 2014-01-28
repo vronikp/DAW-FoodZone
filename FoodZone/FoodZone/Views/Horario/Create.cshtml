@@ -1,0 +1,89 @@
+﻿@model FoodZone.Models.Horario
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Horario</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Horari_Codigo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Horari_Codigo)
+                @Html.ValidationMessageFor(model => model.Horari_Codigo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Horari_Fecha, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Horari_Fecha)
+                @Html.ValidationMessageFor(model => model.Horari_Fecha)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Horari_HoraDesde, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Horari_HoraDesde)
+                @Html.ValidationMessageFor(model => model.Horari_HoraDesde)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Horari_HoraHasta, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Horari_HoraHasta)
+                @Html.ValidationMessageFor(model => model.Horari_HoraHasta)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Horari_Grupo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Horari_Grupo)
+                @Html.ValidationMessageFor(model => model.Horari_Grupo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local_Codigo, "Local_Codigo", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Local_Codigo", String.Empty)
+                @Html.ValidationMessageFor(model => model.Local_Codigo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Usuari_Codigo, "Usuari_Codigo", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Usuari_Codigo", String.Empty)
+                @Html.ValidationMessageFor(model => model.Usuari_Codigo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
